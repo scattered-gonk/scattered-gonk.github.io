@@ -5,7 +5,7 @@ tag2:
   name: malware
 
 tag3:
-  name: threat_intel
+  name: intel
 
 tag4:
   name: tag4
