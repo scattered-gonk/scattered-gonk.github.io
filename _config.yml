@@ -28,7 +28,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: poison
+theme: minima
 plugins:
   - jekyll-feed
 
