@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Markdown Test Page"
-tags: threat-intel
+tags: threat-intel covert-technology
 ---
 
 ## Source: [Markdown Test Page](https://github.com/fullpipe/markdown-test-page)
