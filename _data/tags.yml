@@ -1,11 +1,11 @@
 tag1:
-  name: scams
+  name: tag1
 
 tag2:
-  name: malware
+  name: tag2
 
 tag3:
-  name: threat_intel
+  name: tag3
 
 tag4:
   name: tag4
