@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Lorem Ipsum"
-tags: tag2
+tags: malware
 ---
 
 ## Lorem Ipsum
