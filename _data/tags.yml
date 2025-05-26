@@ -1,10 +1,10 @@
-scams:
+tag1:
   name: scams
 
-malware:
+tag2:
   name: malware
 
-threat_intel:
+tag3:
   name: threat_intel
 
 tag4:
