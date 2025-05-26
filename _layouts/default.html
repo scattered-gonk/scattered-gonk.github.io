@@ -41,11 +41,11 @@
 				</li>
 			</ul>
 		</div>
-		<div class="post_list">
+		<!-- <div class="post_list">
 			{% unless page.date%}
 				{% if page.title == 'me' or page.title == '404...' %}
-					<ul>
-						{% for post in site.posts %}
+					<ul> -->
+						<!-- {% for post in site.posts %}
 						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
 						{% endfor %}
 					</ul>
@@ -59,7 +59,7 @@
 					{% endfor %}
 				</ul>
 			{% endunless %}
-		</div>
+		</div> -->
 		<div class="post_total">
 			{% if page.tag %}
 				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
