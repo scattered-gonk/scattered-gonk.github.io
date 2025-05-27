@@ -1,3 +1,12 @@
+---
+layout: default
+title:  "Tencent-Toll"
+date:   2025-05-26
+description: "qwerty"
+author: "ScatteredGonk"
+tags: scam-analysis
+---
+
 In the past year, there has been a dramatic influx of scam messages arriving at people's phones with the following message, verbatum:
 
 **Toll Violation Notice:**
