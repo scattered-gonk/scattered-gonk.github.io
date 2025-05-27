@@ -1,5 +1,5 @@
 ---
-layout: defauklt
+layout: default
 title: "Markdown Test Page"
 tags: threat-intel covert-technology
 ---
