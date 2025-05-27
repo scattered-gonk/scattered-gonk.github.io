@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: default
 title: "Lorem Ipsum"
 tags: malware
 ---
