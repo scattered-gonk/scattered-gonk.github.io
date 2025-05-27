@@ -7,7 +7,7 @@ author: "ScatteredGonk"
 tags: scam-analysis
 ---
 
-In the past year, there has been a dramatic influx of scam messages arriving at people's phones with the following message, verbatum:
+In the past year, there has been a dramatic influx of scam messages arriving at people's phones regarding a supposed "toll notice." I received many myself, all with the following message, verbatum:
 
 **Toll Violation Notice:**
 
@@ -30,3 +30,9 @@ https://getipass.com-tdi.top/us
 If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the link, or copy and paste it directly into your browser to complete your payment.
 
 **This is your last opportunity. Pay now to avoid irreversible consequences.**
+
+<br>
+<br>
+... if this was true, I had likely incurred enough debt to warrant leaving the country. So, I sat down to look into it. 
+
+Even with an initial look-over of the message, we see enough **red flags** to ruin the strongest budding relationship: we cann see almost every telltale mark of phishing, from introducing a sense of extreme urgency to a suspicious link. 
