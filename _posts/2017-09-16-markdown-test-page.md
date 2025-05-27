@@ -1,5 +1,5 @@
 ---
-layout: first
+layout: tag
 title: "Markdown Test Page"
 tags: threat-intel covert-technology
 ---
