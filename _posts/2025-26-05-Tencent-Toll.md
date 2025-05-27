@@ -9,20 +9,20 @@ tags: scam-analysis
 
 In the past year, there has been a dramatic influx of scam messages arriving at people's phones regarding a supposed "toll notice." I received many myself, all with the following message, verbatum:
 
-**Toll Violation Notice:**
+<span style="color:red"> **Toll Violation Notice:** </span>
 
-This is your **final notice** regarding this unpaid toll balance on your account. You **must settle** the balance within the **next 12 hours** to avoid **severe penalties**.
+This is your <span style="color:red"> **final notice** </span> regarding this unpaid toll balance on your account. You <span style="color:red"> **must settle** </span> the balance within the <span style="color:red"> **next 12 hours** </span> to avoid <span style="color:red"> **severe penalties** </span>.
 
 Unpaid: $2.17
 Due Date: April 19, 2025
 
 Failure to pay within this time frame will result in the following:
 
-1. **Immediate addition of late payment fees** to your balance
-2. **Suspension of your vehicle registration** by the Department of Motor Vehicles (DMV)
-3. Collection actions, including a **negative report to your credit file**
+1. <span style="color:red"> **Immediate addition of late payment fees** </span> to your balance
+2. <span style="color:red"> **Suspension of your vehicle registration** </span> by the Department of Motor Vehicles (DMV)
+3. Collection actions, including a <span style="color:red"> **negative report to your credit file** </span>
 
-Please make your payment promptly to **avoid these severe consequences and protect your driving privileges**.
+Please make your payment promptly to<span style="color:red"> **avoid these severe consequences and protect your driving privileges** </span>.
 
 Pay Now:
 https://getipass.com-tdi.top/us
