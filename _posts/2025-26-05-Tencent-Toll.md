@@ -29,10 +29,10 @@ https://getipass.com-tdi.top/us
 
 If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the link, or copy and paste it directly into your browser to complete your payment.
 
-<span style="color:blue">**This is your last opportunity. Pay now to avoid irreversible consequences**</span>.
+<span style="color:red"> This is your last opportunity. Pay now to avoid irreversible consequences </span>.
 
 <br>
 <br>
-... if this was true, I had likely incurred enough debt to warrant leaving the country. So, I sat down to look into it. 
+... if this was true, I had likely incurred enough debt to warrant leaving the country. Just in case, I sat down to look into the crime I had committed. 
 
 Even with an initial look-over of the message, we see enough **red flags** to ruin the strongest budding relationship: we cann see almost every telltale mark of phishing, from introducing a sense of extreme urgency to a suspicious link. 
