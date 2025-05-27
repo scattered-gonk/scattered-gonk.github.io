@@ -18,9 +18,9 @@ Due Date: April 19, 2025
 
 Failure to pay within this time frame will result in the following:
 
-1.**Immediate addition of late payment fees** to your balance
-2.**Suspension of your vehicle registration** by the Department of Motor Vehicles (DMV)
-3.Collection actions, including a **negative report to your credit file**
+1. **Immediate addition of late payment fees** to your balance
+2. **Suspension of your vehicle registration** by the Department of Motor Vehicles (DMV)
+3. Collection actions, including a **negative report to your credit file**
 
 Please make your payment promptly to **avoid these severe consequences and protect your driving privileges**.
 
