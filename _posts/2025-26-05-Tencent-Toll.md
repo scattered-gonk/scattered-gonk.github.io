@@ -22,10 +22,10 @@ Failure to pay within this time frame will result in the following:
 2. <span style="color:red">**Suspension of your vehicle registration**</span> by the Department of Motor Vehicles (DMV)
 3. Collection actions, including a <span style="color:red">**negative report to your credit file**</span>
 
-Please make your payment promptly to<span style="color:red">**avoid these severe consequences and protect your driving privileges**</span>.
+Please make your payment promptly to <span style="color:red">**avoid these severe consequences and protect your driving privileges**</span>.
 
 Pay Now:
-https://getipass.com-tdi.top/us
+<ins>https://getipass.com-tdi.top/us</ins>
 
 If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the link, or copy and paste it directly into your browser to complete your payment.
 
@@ -35,4 +35,4 @@ If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the l
 <br>
 ... if this was true, I had likely incurred enough debt to warrant leaving the country. Just in case, I sat down to look into the crime I had committed. 
 
-Even with an initial look-over of the message, we see enough <span style="color:red">**red flags**</span> to ruin the strongest budding relationship: we cann see almost every telltale mark of phishing, from introducing a sense of extreme urgency to a suspicious link. 
+Even with an initial look-over of the message, we see enough <span style="color:red">**red flags**</span> to ruin the strongest budding relationship: we cann see almost every telltale mark of phishing, from introducing a sense of extreme urgency to a <ins>suspicious link</ins>. 
