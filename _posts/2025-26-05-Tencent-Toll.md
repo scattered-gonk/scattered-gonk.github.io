@@ -29,7 +29,7 @@ https://getipass.com-tdi.top/us
 
 If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the link, or copy and paste it directly into your browser to complete your payment.
 
-<span style="color:red"> This is your last opportunity. Pay now to avoid irreversible consequences </span>.
+<span style="color:red"> **This is your last opportunity. Pay now to avoid irreversible consequences** </span>.
 
 <br>
 <br>
