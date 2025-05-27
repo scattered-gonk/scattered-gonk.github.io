@@ -41,4 +41,13 @@ As with other phishing sites of a similar nature, this site would only function 
 
 In addition to this, it appeared that the site was using a web socket connection to send and receive data -- something which will play an extensive role in the site's capabilities. But that's for later.
 
-<h2> The Path </h2>
+<h2> What the Victim Sees </h2>
+
+<h2> What the Scammer Sees </h2>
+
+In order to correlate the victim's responses to that same victim, the site generates a unique token to be attributed to the victim. This token is retrieved by vising a URL of the following format:
+    https://getipass.com-{RANDOM_FOUR_LETTERS}.xin/front/checkIp?token=123
+
+The response would come in JSON format, as follows:
+
+    {"msg":"success","code":200,"data":{"cardVerify":true,"encryption":true,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg4MX0._WNVDPP90r8RjVGPlGil5FJUD9kBJXFNji-FkqG9bss"},"success":true,"errorMsg":""}
