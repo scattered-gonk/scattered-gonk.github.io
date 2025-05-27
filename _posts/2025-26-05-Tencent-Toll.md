@@ -36,3 +36,9 @@ If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the l
 ... if this was true, I had likely incurred enough debt to warrant leaving the country. Just in case, I sat down to look into the crime I had committed. 
 
 Even with an initial look-over of the message, we see enough <span style="color:red">**red flags**</span> to ruin the strongest budding relationship: we cann see almost every telltale mark of phishing, from introducing a sense of extreme urgency to a <ins>suspicious link</ins>. 
+
+As with other phishing sites of a similar nature, this site would only function when opened on an iPhone. So, moving onto analysis of the phishing site itself proved to require the same workaround as mentioned in previous blog posts: I would have to monitor web traffic and source files via connecting an iPhone to a MacBook, or other safari-enabled computer. Having done so, I was able to retrieve Javascript, CSS and HTML files used by the site.
+
+In addition to this, it appeared that the site was using a web socket connection to send and receive data -- something which will play an extensive role in the site's capabilities. But that's for later.
+
+<h2> The Path </h2>
