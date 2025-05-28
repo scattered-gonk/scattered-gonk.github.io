@@ -67,7 +67,7 @@ The response would come in JSON format, as follows:
 
 <h2> Picking It Apart </h2>
 
-To start looking into the site's functionality, we have to deobfuscate the file which handles the bulk of the sending and receiving. We use lelintinh's [de4js](https://lelinhtinh.github.io/de4js/) to reliably accomplish this every time we have to deobfuscate Javascript (we are not associated with lelintinh, just big fans :3). 
+To start looking into the site's functionality, we have to deobfuscate the file which handles the bulk of the sending and receiving. We use lelintinh's [de4js](https://lelinhtinh.github.io/de4js/) to reliably accomplish this every time we have to deobfuscate Javascript (we are not associated with lelintinh, just big fans of good web apps :3). 
 
 Although the Javascript is marginally more readable, all the variables and functions remain largely difficult to read. Instead of normal variable names, we see things like this:
 
