@@ -95,7 +95,7 @@ The first function is straightforward. It contains the array, and returns it. Fo
 I will refer to the second function as get_word_from_array(*index*). Before we can dissect how the array is unshuffled, we have to learn about how get_word_from_array(*index*) is used. For instance, take this line:
 
 ```js
-_0xdeadbeef = "https://"[get_word_from_array(340)]("ir")+get_word_from_array(560)+"/"+get_word_from_array(220)
+_0xdeadbeef = "https://"[get_word_from_array(340)]("toll")+get_word_from_array(560)+"/"+get_word_from_array(220)
 ```
 
 the function get_word_from_array(*index*) retrieves an element from the array, given a specific index. Oftentimes, the function will take the passed index and subtract a hard-coded offset to calculate the element's *true* index, as follows:
@@ -114,15 +114,15 @@ With this, we can begin to deobfuscate our jumbled code. Using get_word_from_arr
 
 So, now we have
 ```js
-_0xdeadbeef = "https://"[".concat"]("ir")+"scam.com"+"/"+"sendCode"
+_0xdeadbeef = "https://"[".concat"]("toll")+"scam.com"+"/"+"sendCode"
 ```
 By the sacred, ridiculous rules of Javascript we can change ".concat" into the .concat() function due to the brackets enveloping the String. Simplifying the code more, we get:
 ```js
-_0xdeadbeef = "https://".concat("ir")+"scam.com"+"/sendCode"
+_0xdeadbeef = "https://".concat("toll")+"scam.com"+"/sendCode"
 ```
 Put it all together, and we get
 ```js
-_0xdeadbeef = "https://irscam.com/sendCode"
+_0xdeadbeef = "https://tollscam.com/sendCode"
 ```
 likely an endpoint to either send or receive data!
 
