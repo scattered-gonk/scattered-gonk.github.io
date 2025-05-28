@@ -16,7 +16,6 @@ tags: scam-analysis
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
 
 <hr />
-<br>
 
 <h1> You've probably heard about this </h1>
 
