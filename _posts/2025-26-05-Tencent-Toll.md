@@ -11,7 +11,7 @@ tags: scam-analysis
 
 *Sample: https://illinois.gov-jan.vip/pay*  
 *Sample: https://idot.illinois.gov-tht.live/us*
-* As of 5/27/2025, there are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
+* As of 5/28/2025, there are currently 76 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
 * As of 5/28/2025, there are currently 5 variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
@@ -21,7 +21,7 @@ tags: scam-analysis
 
 <h1> You've probably heard about this </h1>
 
-In the past year, there's been a dramatic influx of scam text messages regarding a supposed "toll notice." I received many myself, all with the following content, verbatum:
+In the past year, there's been a dramatic influx of scam text messages regarding a supposed "toll notice." We received many ourselves, all with the following content, verbatum:
 
 <span style="color:red">**Toll Violation Notice:**</span>
 
@@ -47,11 +47,11 @@ If the link fails, reply with 'Y', exit the SMS, and reopen it to activate the l
 
 <br>
 <br>
-... if this was true, I had likely incurred enough debt to warrant leaving the country. When I realized the cost of checking in my bags would far exceed the toll charge, I sat down to look into my crime. 
+... if this was true, we had likely incurred enough debt to warrant leaving the country. When we realized the cost of checking in our bags would far exceed the toll charge, we sat down to look into our crime. 
 
 Even with a cursory look-over of the message, we see almost a dozen <span style="color:red">**red flags**</span>, telltale mark of phishing, from introducing a sense of extreme urgency to a <ins>suspicious link</ins>. 
 
-As with other phishing sites of a similar nature, this site would only function when opened on an iPhone. So, moving onto analysis of the phishing site itself proved to require the same workaround as mentioned in previous blog posts: I would have to monitor web traffic and source files via connecting an iPhone to a MacBook, or other safari-enabled computer. Having done so, I was able to retrieve Javascript, CSS and HTML files used by the site.
+As with other phishing sites of a similar nature, this site would only function when opened on an iPhone. So, moving onto analysis of the phishing site itself proved to require the same workaround as mentioned in previous blog posts: we would have to monitor web traffic and source files via connecting an iPhone to a MacBook, or other safari-enabled computer. Having done so, we were able to retrieve Javascript, CSS and HTML files used by the site.
 
 In addition to this, it appeared that the site was using a web socket connection to send and receive data -- something which will play an extensive role in the site's capabilities. But that's for later.
 
@@ -90,10 +90,10 @@ The process depends of three functions:
 3. The third unshuffles the array, so that it can be used by the rest of the scripts 
 
 ### get_word_array()
-The first function is straightforward. It contains the array, and returns it. For the sake of readability, I'll refer to it as get_word_array()
+The first function is straightforward. It contains the array, and returns it. For the sake of readability, we'll refer to it as get_word_array()
 
 ### get_word_from_array(index)
-I will refer to the second function as get_word_from_array(*index*). Before we can dissect how the array is unshuffled, we have to learn about how get_word_from_array(*index*) is used. For instance, take this line:
+We will refer to the second function as get_word_from_array(*index*). Before we can dissect how the array is unshuffled, we have to learn about how get_word_from_array(*index*) is used. For instance, take this line:
 
 ```js
 _0xdeadbeef = "https://"[get_word_from_array(340)]("toll")+get_word_from_array(560)+"/"+get_word_from_array(220)
