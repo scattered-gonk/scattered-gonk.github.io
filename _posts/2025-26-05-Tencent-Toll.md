@@ -68,7 +68,7 @@ The response would come in JSON format, as follows:
     {"msg":"success","code":200,"data":{"cardVerify":true,"encryption":true,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg4MX0._WNVDPP90r8RjVGPlGil5FJUD9kBJXFNji-FkqG9bss"},"success":true,"errorMsg":""}
 
 
-<h2> Picking It Apart <h2>
+<h2> Picking It Apart </h2>
 
 To start looking into the site's functionality, we have to deobfuscate the file which handles the bulk of the sending and receiving. We use lelintinh's [de4js](https://lelinhtinh.github.io/de4js/) to reliably accomplish this every time we have to deobfuscate Javascript (we are not associated with lelintinh, just big fans :3). 
 
