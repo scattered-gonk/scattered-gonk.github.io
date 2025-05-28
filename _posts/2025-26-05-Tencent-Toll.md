@@ -10,7 +10,7 @@ tags: scam-analysis
 **[!] ACTIVE SCAM [!]**
 
 *Sample: https://illinois.gov-jan.vip/pay*
-* There are currently 69 variations of the https://illinois.gov-{THREE_LETTERS}.vip/pay that are all (as of 5/27/2025) live and operational. 
+* There are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all (as of 5/27/2025) live and operational. 
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
@@ -59,7 +59,7 @@ In addition to this, it appeared that the site was using a web socket connection
 <h2> What the Scammer Sees </h2>
 
 In order to correlate the victim's responses to that same victim, the site generates a unique token to be attributed to the victim. This token is retrieved by vising a URL of the following format:
-    https://getipass.com-{FOUR_LETTERS}.xin/front/checkIp?token=123
+    https://getipass.com-{four_letters}.xin/front/checkIp?token=123
 
 The response would come in JSON format, as follows:
 
