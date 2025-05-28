@@ -16,7 +16,7 @@ tags: scam-analysis
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
 
 **[!] ACTIVE SCAM [!]**
-
+<hr />
 <br>
 <br>
 <br>
