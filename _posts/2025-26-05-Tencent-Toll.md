@@ -17,8 +17,6 @@ tags: scam-analysis
 
 <hr />
 <br>
-<br>
-<br>
 
 <h1> You've probably heard about this </h1>
 
