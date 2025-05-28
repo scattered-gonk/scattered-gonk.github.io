@@ -65,6 +65,13 @@ The response would come in JSON format, as follows:
 
     {"msg":"success","code":200,"data":{"cardVerify":true,"encryption":true,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg4MX0._WNVDPP90r8RjVGPlGil5FJUD9kBJXFNji-FkqG9bss"},"success":true,"errorMsg":""}
 
+
+<h2> URL Endpoints </h2>
+
+/front
+    /submit
+    /checkIp?token=123
+
 <h2> Attribution </h2>
 
 Although never an easy thing to do, we can look to several attributes of the phishing kit and sites to try and determine who created the scam, or at the very least, provided the infrastructure and code to facilitate the activities of cyber criminals.
