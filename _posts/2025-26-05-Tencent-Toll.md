@@ -7,6 +7,16 @@ author: "ScatteredGonk"
 tags: scam-analysis
 ---
 
+<h1> [!] ACTIVE SCAM [!] </h1>
+
+* There are currently 69 variations of the https://illinois.gov-{3_LETTER_COMBINATION}.vip/pay that are all (as of 5/27/2025) live and operational. 
+* The sites utilize a phishing kit identical to the one discussed in this post.
+* The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
+* The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
+
+<h1> [!] ACTIVE SCAM [!] </h1>
+
+
 In the past year, there has been a dramatic influx of scam messages arriving at people's phones regarding a supposed "toll notice." I received many myself, all with the following message, verbatum:
 
 <span style="color:red">**Toll Violation Notice:**</span>
