@@ -7,7 +7,7 @@ author: "ScatteredGonk"
 tags: scam-analysis
 ---
 
-**[!] ACTIVE SCAM [!]**
+<img src="/assets/nail_bite.ico" width="200" height="100"> **[!] ACTIVE SCAM [!]** <img src="/assets/nail_bite.ico" width="200" height="100">
 
 *Sample: https://illinois.gov-jan.vip/pay*
 * There are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all (as of 5/27/2025) live and operational. 
