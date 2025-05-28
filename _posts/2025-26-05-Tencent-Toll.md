@@ -17,7 +17,9 @@ tags: scam-analysis
 
 **[!] ACTIVE SCAM [!]**
 
-
+<br>
+<br>
+<br>
 In the past year, there has been a dramatic influx of scam messages arriving at people's phones regarding a supposed "toll notice." I received many myself, all with the following message, verbatum:
 
 <span style="color:red">**Toll Violation Notice:**</span>
