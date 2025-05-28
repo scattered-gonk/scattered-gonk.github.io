@@ -10,7 +10,7 @@ tags: scam-analysis
 <img src="/assets/nail_bite.ico" width="30" height="30"> **  ACTIVE SCAM  **<img src="/assets/nail_bite.ico" width="30" height="30">
 
 *Sample: https://illinois.gov-jan.vip/pay*
-* There are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all (as of 5/27/2025) live and operational. 
+* As of 5/27/2025, there are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
@@ -64,3 +64,13 @@ In order to correlate the victim's responses to that same victim, the site gener
 The response would come in JSON format, as follows:
 
     {"msg":"success","code":200,"data":{"cardVerify":true,"encryption":true,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg4MX0._WNVDPP90r8RjVGPlGil5FJUD9kBJXFNji-FkqG9bss"},"success":true,"errorMsg":""}
+
+<h2> Attribution </h2>
+
+Although never an easy thing to do, we can look to several attributes of the phishing kit and sites to try and determine who created the scam, or at the very least, provided the infrastructure and code to facilitate the activities of cyber criminals.
+
+For one, the wide majority of comments sprinkled throughout the code are written in Simplified Chinese. Not only that, but functions which logged errors onto the console featured error messages exclusively in Simplified Chinese. If we ignore the potential for this to be chicken-feed dropped in the code by the malicious actors to drive our attribution down the wrong path, we can infer that the designers of the kit originate from an area in which Simplified Chinese is primarily written, and/or Mandarin Chinese is spoken.
+
+In addition to these elements of the script, the domains themselves are most often hosted by Shenzhen Tencent Computer Systems Company Limited, a Chinese multinational technology conglomerate and holding company headquartered in Shenzhen. 
+
+Of course, we aren't the first to attribute these scams to hackers from China. Warnings from [tabloid news](https://nypost.com/2025/01/28/tech/fake-toll-road-texts-sweep-america-as-chinese-scammers-target-us-drivers/) and [industry professionals](https://krebsonsecurity.com/2025/01/chinese-innovations-spawn-wave-of-toll-phishing-via-sms/) alike cranked the siren to alert us of the sudden onslaught of a massive, almost-fine-tuned SMS phishing campaign. 
