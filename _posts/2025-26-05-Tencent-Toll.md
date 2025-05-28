@@ -7,7 +7,7 @@ author: "ScatteredGonk"
 tags: scam-analysis
 ---
 
-<img src="/assets/nail_bite.ico" width="30" height="30"> **  ACTIVE SCAM  **<img src="/assets/nail_bite.ico" width="30" height="30">
+<img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**  <img src="/assets/nail_bite.ico" width="30" height="30">
 
 *Sample: https://illinois.gov-jan.vip/pay*
 * As of 5/27/2025, there are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
@@ -15,7 +15,7 @@ tags: scam-analysis
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
 
-<img src="/assets/nail_bite.ico" width="30" height="30"> **  ACTIVE SCAM  **<img src="/assets/nail_bite.ico" width="30" height="30">
+<img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**  <img src="/assets/nail_bite.ico" width="30" height="30">
 <hr />
 <br>
 <br>
