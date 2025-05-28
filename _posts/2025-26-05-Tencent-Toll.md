@@ -67,7 +67,7 @@ The response would come in JSON format, as follows:
 
 <h2> Picking It Apart </h2>
 
-To start looking into the site's functionality, we have to deobfuscate the file which handles the bulk of the sending and receiving. We use lelintinh's [de4js](https://lelinhtinh.github.io/de4js/) to reliably accomplish this every time we have to deobfuscate Javascript (we are not associated with lelintinh, just big fans of good web apps :3). 
+To start looking into the site's functionality, we have to deobfuscate the file which handles the bulk of the sending and receiving. We use lelintinh's [de4js](https://lelinhtinh.github.io/de4js/) to reliably accomplish this every time we have to deobfuscate Javascript (we are not affiliated with lelintinh, just big fans of good web apps :3). 
 
 Although the Javascript is marginally more readable, all the variables and functions remain largely difficult to read. Instead of normal variable names, we see things like this:
 
@@ -178,13 +178,58 @@ If, when plugged into the equation, the result of all these Integer values does 
 
 This cycle continues until the calculcated value is equal to the <mark style="background-color:  #B0DCEB">Specific Value</mark> -- when this occurs, the loop breaks. The array has been "unshuffled"! It can now be used throughout the rest of the script to retrieve the correct elements from the array.
 
-The act of calling get_word_from_array(*index*) must be repeated for almost every line of obfuscated code to determine its true purpose -- this is a process perfect for medidation or hobbyist dissociation.
+The act of calling get_word_from_array(*index*) must be repeated for almost every line of obfuscated code to determine its true purpose -- this is a process perfect for medidation or hobbyist masochism.
 
 <h2> URL Endpoints </h2>
+
+We determined the site to use the following endpoints to send and receive data.
 
 /front  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/submit  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/checkIp?token=123  
+
+
+<h2> Websockets! </h2>
+
+The site employs a websocket connection to send and receive encrypted chunks of data, encoding the victim's credentials and personally identifiable information using a proprietary technique.
+
+<h2> A Proprietary Technique </h2>
+
+In order to automate our poking and prodding of this species of scam site, we created a Python script which could would create a URL according to the format of the site's link and endpoint configuration. In order to have a destination to send data to, we must first make the site generate a unique token for us -- we accomplished this with the following script:
+
+```python
+def get_token(URL):
+     URL+="/front/checkIp?token=123"
+     token_response = requests.get(URL)
+     json_info = token_response.json()
+     return json_info['data']['token']
+
+TOKEN = get_token(URL)
+```
+
+then, we encrypt our data as follows:
+
+```python
+def toBase64(to_convert):
+        return base64.b64encode(str.encode(to_convert))
+
+def baseMd5(var1, var2, conditional):
+    if(conditional):
+        base64String = toBase64(var1 + var2).decode()
+        md5Version = hashlib.md5(base64String.encode("utf-8")).hexdigest()
+        return md5Version
+    else:
+        return var1
+
+def encrypt(TOKEN):
+    return baseMd5('init',TOKEN,True)
+
+result = encrypt(TOKEN)
+URL+="/front/"+result+"?token="+TOKEN
+```
+
+after performing a GET request on the URL, we receive something a large chunk of encrypted data. We are currently still investigating into what this chunk represents, and how to decrypt it.
+
 
 <h2> Attribution </h2>
 
