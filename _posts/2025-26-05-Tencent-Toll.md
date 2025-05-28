@@ -8,6 +8,7 @@ tags: scam-analysis
 ---
 
 <h1> [!] ACTIVE SCAM [!] </h1>
+<h2> Sample: https://illinois.gov-jan.vip/pay </h2>
 
 * There are currently 69 variations of the https://illinois.gov-{3_LETTER_COMBINATION}.vip/pay that are all (as of 5/27/2025) live and operational. 
 * The sites utilize a phishing kit identical to the one discussed in this post.
