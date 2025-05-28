@@ -8,11 +8,13 @@ tags: scam-analysis
 ---
 
 **[!] ACTIVE SCAM [!]**
+
 *Sample: https://illinois.gov-jan.vip/pay*
 * There are currently 69 variations of the https://illinois.gov-{3_LETTER_COMBINATION}.vip/pay that are all (as of 5/27/2025) live and operational. 
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
+
 **[!] ACTIVE SCAM [!]**
 
 
