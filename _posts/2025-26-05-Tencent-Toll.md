@@ -69,8 +69,8 @@ The response would come in JSON format, as follows:
 <h2> URL Endpoints </h2>
 
 /front  
-    /submit  
-    /checkIp?token=123  
+&nbsp;&nbsp;&nbsp;&nbsp;/submit  
+&nbsp;&nbsp;&nbsp;&nbsp;/checkIp?token=123  
 
 <h2> Attribution </h2>
 
