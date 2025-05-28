@@ -10,10 +10,12 @@ tags: scam-analysis
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
 *Sample: https://illinois.gov-jan.vip/pay*
+*Sample: https://idot.illinois.gov-tht.live/us*
 * As of 5/27/2025, there are currently 69 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
+* As of 5/28/2025, there are currently 5 variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
-* The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receivinf data.
+* The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receiving data.
 
 <hr />
 
@@ -195,7 +197,7 @@ The site employs a websocket connection to send and receive encrypted chunks of 
 
 <h2> A Proprietary Technique </h2>
 
-In order to automate our poking and prodding of this species of scam site, we created a Python script which could would create a URL according to the format of the site's link and endpoint configuration. In order to have a destination to send data to, we must first make the site generate a unique token for us -- we accomplished this with the following script:
+In order to automate our poking and prodding of this species of scam site, we created a Python script which creates a URL according to the format of the site's link and endpoint configuration. In order to have a destination to send data to, we must first make the site generate a unique token for us -- we accomplished this with the following script:
 
 ```python
 def get_token(URL):
