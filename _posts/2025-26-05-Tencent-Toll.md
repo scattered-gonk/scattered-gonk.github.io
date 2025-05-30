@@ -57,15 +57,6 @@ In addition to this, it appeared that the site was using a web socket connection
 
 <h2> What the Victim Sees </h2>
 
-<h2> What the Scammer Sees </h2>
-
-In order to correlate the victim's responses to that same victim, the site generates a unique token to be attributed to the victim. This token is retrieved by vising a URL of the following format:
-    https://getipass.com-{four_letters}.xin/front/checkIp?token=123
-
-The response would come in JSON format, as follows:
-
-    {"msg":"success","code":200,"data":{"cardVerify":true,"encryption":true,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6ODg4MX0._WNVDPP90r8RjVGPlGil5FJUD9kBJXFNji-FkqG9bss"},"success":true,"errorMsg":""}
-
 
 <h2> Picking It Apart </h2>
 
