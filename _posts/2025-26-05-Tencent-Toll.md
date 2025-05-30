@@ -192,7 +192,19 @@ We determined the site to use the following endpoints to send and receive data.
 
 Navigating to the /checkIp?token=123 triggers the server to generate a new token for us
 ```json
-{"msg":"success","code":200,"data":{"cardVerify":true,"encryption":false,"isTips":false,"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3OTR9.-bXcaqCmen-RltegXo1oqBe0-bsdH6FiuR5Q79JwlJg"},"success":true,"errorMsg":""}
+{
+    "msg":"success",
+    "code":200,
+    "data":
+        {
+        "cardVerify":true,
+        "encryption":false,
+        "isTips":false,
+        "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc3OTR9.-bXcaqCmen-RltegXo1oqBe0-bsdH6FiuR5Q79JwlJg"
+        },
+    "success":true,
+    "errorMsg":""
+}
 ```
 which we can then use to send and receive data from the server.
 
