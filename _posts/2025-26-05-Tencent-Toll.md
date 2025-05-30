@@ -11,8 +11,8 @@ tags: scam-analysis
 
 *Sample: https://illinois.gov-jan.vip/pay*  
 *Sample: https://idot.illinois.gov-tht.live/us*
-* As of 5/28/2025, there are currently 76 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
-* As of 5/28/2025, there are currently 5 variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
+* As of 5/30/2025, there are currently ~~76~~ 9 variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
+* As of 5/30/2025, there are currently 5 variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receiving data.
