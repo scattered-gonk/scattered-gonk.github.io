@@ -241,7 +241,13 @@ result = encrypt(TOKEN)
 URL+="/front/"+result+"?token="+TOKEN
 ```
 
-after performing a GET request on the URL, we receive something a large chunk of encrypted data. We are currently still investigating into what this chunk represents, and how to decrypt it.
+when navigated to, the URL returns a large chunk of encrypted data:
+
+```
+DVcFNd06F6ietYommr9DU5JijJsatm+SGk3DLCIow6FP6H8bzzNcoGyvKO0WsdjqzWjWwWB7mlt9H5d/Pg8W4uoB63r3wUslmbQ7Jfjy5C89z9GmcOJDU6jGRb7MLcEqqUPb1z3zrOkmCNFWoWaEo22Fx0r3dDgVBQlKW41e8HeYxCWpHTGD9T/a1a/FQ4INJ8B/Aff8o+yJQl/FOfylSqBiUQY1qseIeRYY5BS1vQCaLc7Yc7VmKCVZ01rhGAEvlUAd/VuBADQeovf9zm+WAbpY1BFOngHjpipdBIB/7+CjYAztq9wLRibjfIW1jDnZqkPRHB/oVzTPgh6cD+2NbarqpVursLvuFynGv+/LlSN6gi4wfmguGHtZ8/JB7LcryS+ZXqjGxRzmNH/e3SJdCIE7jcjX6766ViDIbXfVHeVPC0zAe+f9KYMNB1aWtP2TiBbLECpeZ/OouEOrx6FsCwBVmtxjSiQKDVsY0aDAyH0CAwyt9/GHE0yWwNRwIgRUv8B32CqIluTV0vnhLHBLB2TtGzudLQw425kyHdhyeqbCy92xDjFnGCZnhH3Jaegzr2OyuYszByvhEEALgTzAy9LmFvxeJ0tchFU+IWWEsNV5sP05NFWiP1yqRnUkqmTB3WKA1/5Tiz3nifX6/ffsT+VlJ1JHR3Kgnehq3Lc1aRM=
+```
+
+We are currently still investigating what this chunk represents, and how to decrypt it. If you are able to successfully decrypt this data, please contact us at scattered_gonk@proton.me!
 
 
 <h2> Attribution </h2>
