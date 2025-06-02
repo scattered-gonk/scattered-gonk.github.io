@@ -243,7 +243,7 @@ URL+="/front/"+result+"?token="+TOKEN
 
 when navigated to, the URL returns a large chunk of encrypted data:
 
-```
+```shell
 DVcFNd06F6ietYommr9DU5JijJsatm+SGk3DLCIow6FP6H8bzzNcoGyvKO0WsdjqzWjWwWB7mlt9H5d/
 Pg8W4uoB63r3wUslmbQ7Jfjy5C89z9GmcOJDU6jGRb7MLcEqqUPb1z3zrOkmCNFWoWaEo22Fx0r3dDgV
 BQlKW41e8HeYxCWpHTGD9T/a1a/FQ4INJ8B/Aff8o+yJQl/FOfylSqBiUQY1qseIeRYY5BS1vQCaLc7Y
