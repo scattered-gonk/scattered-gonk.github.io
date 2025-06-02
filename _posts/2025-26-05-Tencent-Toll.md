@@ -11,8 +11,8 @@ tags: scam-analysis
 
 <img src="/assets/smile.png" width="30" height="30">  *Likely an active scam, though no live samples listed below*  <img src="/assets/smile.png" width="30" height="30">
 
-*Sample: https://illinois.gov-jan.vip/pay*  
-*Sample: https://idot.illinois.gov-tht.live/us*
+*Dead Sample: https://illinois.gov-jan.vip/pay*  
+*Dead Sample: https://idot.illinois.gov-tht.live/us*
 * As of 6/1/2025, there are currently ~~76~~ ~~9~~ **0** variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
 * As of 5/30/2025, there are currently ~~5~~ **0** variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
 * The sites utilize a phishing kit identical to the one discussed in this post.
