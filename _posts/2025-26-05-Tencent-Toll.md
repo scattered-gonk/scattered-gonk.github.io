@@ -7,14 +7,16 @@ author: "ScatteredGonk"
 tags: scam-analysis
 ---
 
-<!-- <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**   <img src="/assets/nail_bite.ico" width="30" height="30"> -->
+<img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
-<img src="/assets/smile.png" width="30" height="30">  *Likely an active scam, though no live samples listed below*  <img src="/assets/smile.png" width="30" height="30">
+<!-- <img src="/assets/smile.png" width="30" height="30">  *Likely an active scam, though no live samples listed below*  <img src="/assets/smile.png" width="30" height="30"> -->
 
+* Sample: https://in.gov-tei.icu/us
+* As of 6/4/2025, there are currently **26** variations of the https://in.gov-{three-letters}.icu/us domain that are all live and operational.
 *Dead Sample: https://illinois.gov-jan.vip/pay*  
 *Dead Sample: https://idot.illinois.gov-tht.live/us*
-* As of 6/1/2025, there are currently ~~76~~ ~~9~~ **0** variations of the https://illinois.gov-{three_letters}.vip/pay that are all live and operational. 
-* As of 5/30/2025, there are currently ~~5~~ **0** variations of the https://idot.illinois.gov-{three_letters}.live/us that are all live and operational.
+* As of 6/1/2025, there are currently ~~76~~ ~~9~~ **0** variations of the https://illinois.gov-{three_letters}.vip/pay domain that are all live and operational. 
+* As of 5/30/2025, there are currently ~~5~~ **0** variations of the https://idot.illinois.gov-{three_letters}.live/us domain that are all live and operational.
 * The sites utilize a phishing kit identical to the one discussed in this post.
 * The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
 * The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receiving data.
