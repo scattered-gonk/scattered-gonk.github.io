@@ -3,4 +3,4 @@ layout: me
 title: me
 ---
 
-Scattered Gonk :)
+Welcome :) each article here has been written by a member of the Squeky Flotilla
