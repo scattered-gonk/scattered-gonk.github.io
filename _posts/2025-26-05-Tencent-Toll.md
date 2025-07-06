@@ -7,9 +7,9 @@ author: "TriceraDuck"
 tags: scam-analysis
 ---
 
-<img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE SCAM**   <img src="/assets/nail_bite.ico" width="30" height="30">
+<img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
-<!-- <img src="/assets/smile.png" width="30" height="30">  *Likely an active scam, though no live samples listed below*  <img src="/assets/smile.png" width="30" height="30"> -->
+<!-- <img src="/assets/smile.png" width="30" height="30">  **Inactive Campaign**  <img src="/assets/smile.png" width="30" height="30"> -->
 
 * Sample: https://in.gov-tei.icu/us
 * As of 6/4/2025, there are currently **26** variations of the https://in.gov-{three-letters}.icu/us domain that are all live and operational.  
