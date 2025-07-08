@@ -333,7 +333,7 @@ Of course, we aren't the first to attribute these scams to hackers from China. W
 
 <div id="popup1" class="overlay">
     <div class="popup">
-        <h2>SumKit Is Embedded Into These Sites</h2>
+        <h2>TollKit Is Embedded Into These Sites</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
         <ul style="list-style-type:none;">
