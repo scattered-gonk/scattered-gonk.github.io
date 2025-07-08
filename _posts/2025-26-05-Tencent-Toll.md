@@ -7,20 +7,81 @@ author: "TriceraDuck"
 tags: scam-analysis
 ---
 
+<style>
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  overflow-x:hidden;
+  overflow-y:auto;
+  width: 90%;
+  min-height:200px;
+  max-height:250px;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+</style>
+
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
 <!-- <img src="/assets/smile.png" width="30" height="30">  **Inactive Campaign**  <img src="/assets/smile.png" width="30" height="30"> -->
 
-* Sample: https://in.gov-tei.icu/us
 * As of 6/4/2025, there are currently **26** variations of the https://in.gov-{three-letters}.icu/us domain that are all live and operational.  
 <br>
-*Dead Sample: https://illinois.gov-jan.vip/pay*  
-*Dead Sample: https://idot.illinois.gov-tht.live/us*
 * As of 6/1/2025, there are currently ~~76~~ ~~9~~ **0** variations of the https://illinois.gov-{three_letters}.vip/pay domain that are all live and operational. 
 * As of 5/30/2025, there are currently ~~5~~ **0** variations of the https://idot.illinois.gov-{three_letters}.live/us domain that are all live and operational.
-* The sites utilize a phishing kit identical to the one discussed in this post.
-* The malicious domains remain hosted at Tencent Building, Kejizhongyi Avenue. 
-* The phishing kit continues to rely on websockets and hardcoded private/public keys for collecting and receiving data.
+
+* A full list of formely live domains can be found here: <a href="#popup1"> {Malicious URLs using TollKit} </a>
+
 
 <hr />
 
@@ -261,10 +322,210 @@ We are currently still investigating what this chunk represents, and how to decr
 
 <h2> Attribution </h2>
 
-Although never an easy thing to do, we can look to several attributes of the phishing kit and sites to try and determine who created the scam, or at the very least, provided the infrastructure and code to facilitate the activities of cyber criminals.
+Although never an easy thing to do, we can look to several attributes of the phishing kit and sites to try and determine who created the campaign, or at the very least, provided the infrastructure and code to facilitate the eCrime.
 
 For one, the wide majority of comments sprinkled throughout the code are written in Simplified Chinese. Not only that, but functions which logged errors onto the console featured error messages exclusively in Simplified Chinese. If we ignore the potential for this to be chicken-feed dropped in the code by the malicious actors to drive our attribution down the wrong path, we can infer that the designers of the kit originate from an area in which Simplified Chinese is primarily written, and/or Mandarin Chinese is spoken.
 
-In addition to these elements of the script, the domains themselves are most often hosted by Shenzhen Tencent Computer Systems Company Limited, a Chinese multinational technology conglomerate and holding company headquartered in Shenzhen. 
+In addition to these elements of the script, the domains themselves are most often hosted at Tencent Building, Kejizhongyi Avenue by Shenzhen Tencent Computer Systems Company Limited, a Chinese multinational technology conglomerate and holding company headquartered in Shenzhen. 
 
 Of course, we aren't the first to attribute these scams to hackers from China. Warnings from [tabloid news](https://nypost.com/2025/01/28/tech/fake-toll-road-texts-sweep-america-as-chinese-scammers-target-us-drivers/) and [industry professionals](https://krebsonsecurity.com/2025/01/chinese-innovations-spawn-wave-of-toll-phishing-via-sms/) alike cranked the siren to alert us of the sudden onslaught of a massive, almost-fine-tuned SMS phishing campaign. 
+
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <h2>SumKit Is Embedded Into These Sites</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+        <ul style="list-style-type:none;">
+            <li>https://in.gov-clq.icu</li>
+            <li>https://in.gov-bmt.icu</li>
+            <li>https://in.gov-bma.icu</li>
+            <li>https://in.gov-epo.icu</li>
+            <li>https://in.gov-bmo.icu</li>
+            <li>https://in.gov-bmw.icu</li>
+            <li>https://in.gov-bmy.icu</li>
+            <li>https://in.gov-bmu.icu</li>
+            <li>https://in.gov-hdc.icu</li>
+            <li>https://in.gov-jma.icu</li>
+            <li>https://in.gov-bmn.icu</li>
+            <li>https://in.gov-bms.icu</li>
+            <li>https://in.gov-neb.icu</li>
+            <li>https://in.gov-bmr.icu</li>
+            <li>https://in.gov-xaw.icu</li>
+            <li>https://in.gov-bmz.icu</li>
+            <li>https://in.gov-bmc.icu</li>
+            <li>https://in.gov-bmv.icu</li>
+            <li>https://in.gov-hnb.icu</li>
+            <li>https://in.gov-bme.icu</li>
+            <li>https://in.gov-ivb.icu</li>
+            <li>https://in.gov-bmx.icu</li>
+            <li>https://in.gov-bmf.icu</li>
+            <li>https://in.gov-guo.icu</li>
+            <li>https://in.gov-ggz.icu</li>
+            <li>https://illinois.gov-gjr.vip</li>
+            <li>https://illinois.gov-lfd.vip</li>
+            <li>https://illinois.gov-eep.vip</li>
+            <li>https://illinois.gov-iaz.vip</li>
+            <li>https://illinois.gov-nhd.vip</li>
+            <li>https://illinois.gov-qab.vip</li>
+            <li>https://illinois.gov-jbr.vip</li>
+            <li>https://illinois.gov-gnt.vip</li>
+            <li>https://illinois.gov-sxo.vip</li>
+            <li>https://illinois.gov-cbh.vip</li>
+            <li>https://illinois.gov-kkf.vip</li>
+            <li>https://illinois.gov-qpz.vip</li>
+            <li>https://illinois.gov-ege.vip</li>
+            <li>https://illinois.gov-bax.vip</li>
+            <li>https://illinois.gov-njm.vip</li>
+            <li>https://illinois.gov-jju.vip</li>
+            <li>https://illinois.gov-dvl.vip</li>
+            <li>https://illinois.gov-byu.vip</li>
+            <li>https://illinois.gov-krk.vip</li>
+            <li>https://illinois.gov-ufx.vip</li>
+            <li>https://illinois.gov-pzd.vip</li>
+            <li>https://illinois.gov-lka.vip</li>
+            <li>https://illinois.gov-kpm.vip</li>
+            <li>https://illinois.gov-iue.vip</li>
+            <li>https://illinois.gov-nzs.vip</li>
+            <li>https://illinois.gov-kky.vip</li>
+            <li>https://illinois.gov-mfr.vip</li>
+            <li>https://illinois.gov-sar.vip</li>
+            <li>https://illinois.gov-nyo.vip</li>
+            <li>https://illinois.gov-irj.vip</li>
+            <li>https://illinois.gov-cgx.vip</li>
+            <li>https://illinois.gov-ywa.vip</li>
+            <li>https://illinois.gov-pnh.vip</li>
+            <li>https://illinois.gov-ncf.vip</li>
+            <li>https://illinois.gov-tsz.vip</li>
+            <li>https://illinois.gov-lri.vip</li>
+            <li>https://illinois.gov-ifa.vip</li>
+            <li>https://illinois.gov-ekd.vip</li>
+            <li>https://illinois.gov-wdc.vip</li>
+            <li>https://illinois.gov-ary.vip</li>
+            <li>https://illinois.gov-tpp.vip</li>
+            <li>https://illinois.gov-uue.vip</li>
+            <li>https://illinois.gov-lru.vip</li>
+            <li>https://illinois.gov-enj.vip</li>
+            <li>https://illinois.gov-ajm.vip</li>
+            <li>https://illinois.gov-iyi.vip</li>
+            <li>https://illinois.gov-zma.vip</li>
+            <li>https://illinois.gov-yio.vip</li>
+            <li>https://illinois.gov-daj.vip</li>
+            <li>https://illinois.gov-ils.vip</li>
+            <li>https://illinois.gov-bhu.vip</li>
+            <li>https://illinois.gov-xyy.vip</li>
+            <li>https://illinois.gov-ijf.vip</li>
+            <li>https://illinois.gov-dcp.vip</li>
+            <li>https://illinois.gov-hdy.vip</li>
+            <li>https://illinois.gov-roa.vip</li>
+            <li>https://illinois.gov-uyl.vip</li>
+            <li>https://illinois.gov-gga.vip</li>
+            <li>https://illinois.gov-mvs.vip</li>
+            <li>https://illinois.gov-web.vip</li>
+            <li>https://illinois.gov-ogo.vip</li>
+            <li>https://illinois.gov-kqu.vip</li>
+            <li>https://illinois.gov-snx.vip</li>
+            <li>https://illinois.gov-kix.vip</li>
+            <li>https://illinois.gov-ihm.vip</li>
+            <li>https://illinois.gov-ibt.vip</li>
+            <li>https://illinois.gov-yea.vip</li>
+            <li>https://illinois.gov-geb.vip</li>
+            <li>https://illinois.gov-bhq.vip</li>
+            <li>https://illinois.gov-ixp.vip</li>
+            <li>https://illinois.gov-tyr.vip</li>
+            <li>https://illinois.gov-iha.vip</li>
+            <li>https://illinois.gov-ajv.vip</li>
+            <li>https://illinois.gov-jan.vip</li>
+            <li>https://illinois.gov-amr.vip</li>
+            <li>https://illinois.gov-bfc.vip</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+            <li>https://idot.illinois.gov-thr.live</li>
+            <li>https://idot.illinois.gov-thw.live</li>
+            <li>https://idot.illinois.gov-thq.live</li>
+            <li>https://idot.illinois.gov-tht.live</li>
+            <li>https://idot.illinois.gov-the.live</li>
+        </ul>   
+        </div>
+    </div>
+</div>
