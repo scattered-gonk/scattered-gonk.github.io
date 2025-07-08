@@ -75,7 +75,7 @@ _0x5ae
 
 and after getting through fits of repulsion, we realize that we're in luck. The site has a built-in method for making sense of this jumble.
 
-It does so throughout the script via a common method of client-side deobfuscation implemented by scam sites: a shuffled array of a words.
+It does so throughout the script via a common method of client-side deobfuscation implemented by scam sites: array rotation obfuscation.
  
 
 *The following is all pasted from our Faux IRS post, as we realized we won't be able to describe the process equally as well again or any better. Enjoy the fruits of our laziness.* 
