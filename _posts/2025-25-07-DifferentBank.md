@@ -101,46 +101,11 @@ and another,
 
 and a couple more
 
-<!-- <img class="homepageimage" src="/assets/homepageimages/arvestlitebank.png">
+<img class="homepageimage" src="/assets/homepageimages/arvestlitebank.png">
 <img class="homepageimage" src="/assets/homepageimages/crescentunion.png">
 <img class="homepageimage" src="/assets/homepageimages/cti.png">
 <img class="homepageimage" src="/assets/homepageimages/gotrustcredit.png">
-<img class="homepageimage" src="/assets/homepageimages/guardiantrust.png"> -->
-
-<div class="container">
-	<div class="row">
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/arvestlitebank.png"/>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/crescentunion.png"/>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/cti.png"/>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/gotrustcredit.png"/>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/guardiantrust.png"/>
-			</div>
-		</div>
-		<div class="col-lg-4 col-sm-6">
-			<div class="thumbnail">
-				<img src="/assets/homepageimages/hioutreach.png"/>
-			</div>
-		</div>
-	</div>
-</div>
+<img class="homepageimage" src="/assets/homepageimages/guardiantrust.png">
 
 ... and another few :(
 
