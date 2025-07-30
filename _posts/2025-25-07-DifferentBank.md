@@ -71,13 +71,12 @@ tags: scam-analysis
   }
 }
 
-.cookie_images {
+.homepageimage {
     width: 80%;
-    margin: -30px;
     padding: 0px;
 }
 
-.homepageimage {
+.container {
     width: 80%;
     padding: 0px;
 }
