@@ -80,3 +80,34 @@ tags: scam-analysis
 </style>
 
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
+
+Perusing PhishTank, we stumbled on a phishing site configured to appear as the homepage to a bank, complete with informational pages, a contact link, and (most importantly) an account creation link which prompts the user to enter their most personal information.
+
+at the same time, we discovered a similar phishing site:
+
+<img class="homepageimage" src="/assets/homepageimages/acmecredence.png">
+
+and another,
+
+<img class="homepageimage" src="/assets/homepageimages/alderstone.png">
+
+and another,
+
+<img class="homepageimage" src="/assets/homepageimages/acetrust.png">
+
+and a couple more
+
+<img class="homepageimage" src="/assets/homepageimages/arvestlitebank.png">
+<img class="homepageimage" src="/assets/homepageimages/crescentunion.png">
+<img class="homepageimage" src="/assets/homepageimages/cti.png">
+<img class="homepageimage" src="/assets/homepageimages/gotrustcredit.png">
+<img class="homepageimage" src="/assets/homepageimages/guardiantrust.png">
+
+... and another few :(
+
+<img class="homepageimage" src="/assets/homepageimages/hioutreach.png">
+<img class="homepageimage" src="/assets/homepageimages/intersaversfin.png">
+<img class="homepageimage" src="/assets/homepageimages/merchantdigital.png">
+<img class="homepageimage" src="/assets/homepageimages/vsldemo.png">
+<img class="homepageimage" src="/assets/homepageimages/wcbdigivest.png">
+<img class="homepageimage" src="/assets/homepageimages/zealfinancial.png">
