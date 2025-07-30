@@ -77,6 +77,10 @@ tags: scam-analysis
     padding: 0px;
 }
 
+.homepageimage {
+  transform: scale(0.5);
+}
+
 </style>
 
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
