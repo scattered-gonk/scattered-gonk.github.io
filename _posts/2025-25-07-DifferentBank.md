@@ -111,3 +111,9 @@ and a couple more
 <img class="homepageimage" src="/assets/homepageimages/vsldemo.png">
 <img class="homepageimage" src="/assets/homepageimages/wcbdigivest.png">
 <img class="homepageimage" src="/assets/homepageimages/zealfinancial.png">
+
+The bulk of these sites were discovered via a Google Dork using the phrase consistently found on each site's home page:
+
+"We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app."
+
+for which we thought it appropriate to call the phishing kit DifferentBank :)
