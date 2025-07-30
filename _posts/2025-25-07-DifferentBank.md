@@ -79,7 +79,6 @@ tags: scam-analysis
 
 .homepageimage {
     width: 80%;
-    margin: -30px;
     padding: 0px;
 }
 
