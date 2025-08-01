@@ -121,7 +121,7 @@ and a couple more
 
 Following the initial PhishTank-sourced sites, we noticed that the sites consistently used the phrase
 
-```javascript
-"We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app."
-```
+<blockquote>
+<p>"We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app."
+</blockquote>
 on their home page; as such, a Google Dork of this phrase revealed the majority of these malicious sites to us. Their insistence of not being like the other banks earned the phishing kit its name: DifferentBank :)
