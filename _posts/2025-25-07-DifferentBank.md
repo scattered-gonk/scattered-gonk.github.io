@@ -4,7 +4,7 @@ title:  "DifferentBank"
 date:   2025-07-25
 description: "qwerty"
 author: "GlowDuck"
-tags: scam-analysis
+tags: phishing-campaigns
 ---
 
 
