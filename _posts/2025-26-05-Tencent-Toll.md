@@ -4,7 +4,7 @@ title:  "Tencent-Toll"
 date:   2025-05-26
 description: "qwerty"
 author: "TriceraDuck"
-tags: scam-analysis
+tags: phishing-campaigns
 ---
 
 <style>
