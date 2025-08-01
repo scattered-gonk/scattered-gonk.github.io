@@ -87,7 +87,7 @@ tags: scam-analysis
 
 Perusing PhishTank, we stumbled on a phishing site configured to appear as the homepage to a bank, complete with informational pages, a contact link, and (most importantly) an account creation link which prompts the user to enter their most personal information.
 
-at the same time, we discovered a similar phishing site:
+at the same time, we discovered a similar phishing site
 
 <img class="homepageimage" src="/assets/homepageimages/acmecredence.png">
 
