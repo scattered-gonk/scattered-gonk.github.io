@@ -85,8 +85,6 @@ tags: phishing-campaigns
 
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
-# Discovery 
-
 Researchers at Squeaky Flotilla have come across a spattering of nearly-identical phishing sites configured to appear as the homepage to a bank, complete with
 * an informational pages, 
 * a contact link, 
@@ -127,5 +125,3 @@ Following the initial PhishTank-sourced sites, we noticed that the sites consist
 "We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app."
 ```
 on their home page; as such, a Google Dork of this phrase revealed the majority of these malicious sites to us. Their insistence of not being like the other banks earned the phishing kit its name: DifferentBank :)
-
-# Analyzing The Kit
