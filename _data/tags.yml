@@ -2,10 +2,10 @@ tag1:
   name: scam-analysis
 
 tag2:
-  name: malware
+  name: phishing-campaigns
 
 tag3:
-  name: threat-intel
+  name: malware
 
 tag4:
-  name: covert-technology
+  name: threat-intel
