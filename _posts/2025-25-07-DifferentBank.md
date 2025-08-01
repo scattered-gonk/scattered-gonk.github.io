@@ -1,5 +1,5 @@
 ---
-layout: scam-analysis-default
+layout: phishing-campaign-default
 title:  "DifferentBank"
 date:   2025-07-25
 description: "qwerty"
@@ -85,13 +85,19 @@ tags: scam-analysis
 
 <img src="/assets/nail_bite.ico" width="30" height="30">  **ACTIVE CAMPAIGN**   <img src="/assets/nail_bite.ico" width="30" height="30">
 
-Perusing PhishTank, we stumbled on a phishing site configured to appear as the homepage to a bank, complete with informational pages, a contact link, and (most importantly) an account creation link which prompts the user to enter their most personal information.
+# Discovery 
 
-at the same time, we discovered a similar phishing site
+Researchers at Squeaky Flotilla have come across a spattering of nearly-identical phishing sites configured to appear as the homepage to a bank, complete with
+* an informational pages, 
+* a contact link, 
+and (most importantly) 
+* an account creation link which prompts the user to enter their most personal information
+
+Initial links were found on PhishTank.org, a Cisco Talos-operated public database of potential and active phishing links that is regularly updated. After encountering the first such site
 
 <img class="homepageimage" src="/assets/homepageimages/acmecredence.png">
 
-and another,
+we came across another,
 
 <img class="homepageimage" src="/assets/homepageimages/alderstone.png">
 
@@ -115,8 +121,11 @@ and a couple more
 <img class="homepageimage" src="/assets/homepageimages/wcbdigivest.png">
 <img class="homepageimage" src="/assets/homepageimages/zealfinancial.png">
 
-The bulk of these sites were discovered via a Google Dork using the phrase consistently found on each site's home page:
+Following the initial PhishTank-sourced sites, we noticed that the sites consistently used the phrase
 
+```javascript
 "We do banking differently. We believe that people come first, and that everyone deserves a great experience every step of the way – whether it’s face to face, over the phone, online or on our app."
+```
+on their home page; as such, a Google Dork of this phrase revealed the majority of these malicious sites to us. Their insistence of not being like the other banks earned the phishing kit its name: DifferentBank :)
 
-for which we thought it appropriate to call the phishing kit DifferentBank :)
+# Analyzing The Kit
