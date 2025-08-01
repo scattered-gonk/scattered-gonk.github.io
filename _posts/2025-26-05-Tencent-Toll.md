@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: scam-analysis-default
 title:  "Tencent-Toll"
 date:   2025-05-26
 description: "qwerty"

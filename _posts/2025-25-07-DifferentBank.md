@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: scam-analysis-default
 title:  "DifferentBank"
 date:   2025-07-25
 description: "qwerty"
