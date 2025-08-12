@@ -94,7 +94,7 @@ tags: threat-intel
   
   p a:hover { color: #5C33FF; }
 }
-<style>
+</style>
 
 In order to facilitate research into attacks which use Telegram to exfiltrate victim information, as well as seek out the appropriate entities to which to report the crimes, we rely on using native Telegram bot API endpoints to enumerate attacker information.
 
@@ -123,7 +123,7 @@ THESE WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZ
 
     MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
 
-</code></pre>
+    </code></pre>
   </div>
   </div>
 </div>
