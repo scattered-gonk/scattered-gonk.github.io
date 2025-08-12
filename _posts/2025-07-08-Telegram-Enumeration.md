@@ -13,6 +13,10 @@ Note: this requires that the attacker leaves their bot token and channel ID avai
 
 THESE WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
 
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/prism.min.js">
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markdown.min.js">
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markup.js">
+
 <pre><code class="language-python">
 from datetime import datetime
 import requests
