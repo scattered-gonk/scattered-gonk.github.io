@@ -8,14 +8,6 @@ tags: threat-intel
 ---
 
 <style>
-    body, html {
-  background: #F3F5FF;
-  font-family: 'Roboto', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 .Container {
   width: 500px;
