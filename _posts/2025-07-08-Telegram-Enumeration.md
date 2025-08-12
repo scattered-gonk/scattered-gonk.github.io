@@ -46,20 +46,20 @@ With this token (and oftentimes, the accompanying channel ID to which the inform
 THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
 
 <pre>
-from datetime import datetime
-import requests
-import time
-import os
+    from datetime import datetime
+    import requests
+    import time
+    import os
 
-USING = "BOT_TOKEN1"
+    USING = "BOT_TOKEN1"
 
-BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
+    BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
 
-CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
+    CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
 
-MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
+    MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
 
-URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
+    URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
 </pre>
 
 <!-- ```python
