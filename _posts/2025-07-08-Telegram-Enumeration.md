@@ -7,15 +7,25 @@ author: "RedDuck"
 tags: threat-intel
 ---
 
-In order to facilitate research into attacks which use Telegram to exfiltrate victim information, as well as seek out the appropriate entities to which to report the crimes, we rely on using native Telegram bot API endpoints to enumerate attacker information.
+Many phishing sites rely on the Telegram bot API to exfiltrate victim data. Oftentimes, eCriminals are either
+<ul>
+    <li> deploying half-baked phishing kits they have purchased from somebody with a username akin to "__1337__phisher", or </li>
+    <li> inexperienced and looking to make a quick profit with minimal effort (and likely more than a pinch of vibe-coding) </li>
+</ul>
 
-Note: this requires that the attacker leaves their bot token and channel ID available, whether in a config file or a network request.
+Fortunately for us, this means they often leave their Telegram bot API tokens publicly accessible, either through
+<ul>
+    <li> hard-coding it into the site's page source </li>
+    <li> exposing it in POST requests and responses </li>
+</ul>
 
-THESE WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
+With this token (and oftentimes, the accompanying channel ID to which the information is sent), we can use the native Telegram bot API to enumerate data pertaining to the attacker's operation, and what data they have stolen so far.
 
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/prism.min.js">
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markdown.min.js">
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markup.js">
+THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markup.js"></script>
 
 <pre><code class="language-python">
 from datetime import datetime
