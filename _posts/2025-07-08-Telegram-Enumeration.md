@@ -9,7 +9,7 @@ tags: threat-intel
 
 Many phishing sites rely on the Telegram bot API to exfiltrate victim data. Oftentimes, eCriminals are either
 <ul>
-    <li> deploying half-baked phishing kits they have purchased from somebody with a username akin to "__1337__phisher", or </li>
+    <li> deploying half-baked phishing kits they've purchased from somebody with a username akin to "__1337__phisher", or </li>
     <li> inexperienced and looking to make a quick profit with minimal effort (and likely more than a pinch of vibe-coding) </li>
 </ul>
 
@@ -27,22 +27,40 @@ THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONL
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markdown.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markup.js"></script>
 
-<pre><code class="language-python">
-from datetime import datetime
-import requests
-import time
-import os
+<!--
+ - Highlight.js Style Demos - https://highlightjs.org/static/demo/
+ - HTML Encoder - http://codebeautify.org/html-encode-string
+ - Tabs to Spaces Converter - http://tabstospaces.com/
+-->
+<html>
+  <head>
+    <!-- Requirements for highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/hopscotch.min.css"> <!-- change style here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  
+  <body>
+    <pre>
+    <code class="csharp"> 
+        from datetime import datetime
+        import requests
+        import time
+        import os
 
-USING = "BOT_TOKEN1"
+        USING = "BOT_TOKEN1"
 
-BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
+        BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
 
-CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
+        CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
 
-MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
+        MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
 
-URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
-</code></pre>
+        URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
+    </code>
+    </pre>
+  </body>
+<html>
 
 <!-- ```python
 from datetime import datetime
