@@ -7,13 +7,140 @@ author: "RedDuck"
 tags: threat-intel
 ---
 
-In order to facilitate our research into attacks which use Telegram to exfiltrate victim information, as well as seek out the appropriate entities to which to report the crimes, we rely on using native Telegram bot API endpoints to enumerate attacker information.
+<style>
+    body, html {
+  background: #F3F5FF;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Container {
+  width: 500px;
+  border-radius: 6px;
+  position: relative;
+  background: #282B36;
+  margin: 60px auto 0 auto;
+  box-shadow: 0 10px 40px 0 rgba(40,43,54,0.30);
+  
+  nav {
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    
+    a {
+      z-index: 2;
+      color: #A5AAAF;
+      font-size: 13px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      &:hover, &.active { color: white; }
+    }
+    
+    .current {
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 40px;
+      height: 22px;
+      border-radius: 3px;
+      position: absolute;
+      background-color: rgba(white, .2);
+    }
+  }
+}
+
+.Container .Contents {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.Container .Content {
+  width: 100%;
+  flex-shrink: 0;
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 60px 30px 30px 30px;
+  
+  .hljs  {
+    padding: 0; 
+    font-size: 13px;
+    line-height: 24px;
+    font-family: Consolas, Monaco, monospace;
+  }
+}
+
+.hljs-number { color: #FFC24C }
+
+.credit {
+  left: 50%;
+  bottom: 30px;
+  width: 300px;
+  position: fixed;
+  text-align: center;
+  margin-left: -150px;
+  
+  p {
+    color: #6C738B;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+  
+  p a {
+    color: #32325D;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  
+  p a:hover { color: #5C33FF; }
+}
+<style>
+
+In order to facilitate research into attacks which use Telegram to exfiltrate victim information, as well as seek out the appropriate entities to which to report the crimes, we rely on using native Telegram bot API endpoints to enumerate attacker information.
 
 Note: this requires that the attacker leaves their bot token and channel ID available, whether in a config file or a network request.
 
-THESE WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. OUR RESEARCHERS ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
+THESE WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
 
-```python
+<div class="Container">
+  <nav>
+    <div class="current"></div>
+    <a href="#one" class="active">Python</a>
+  </nav>
+  <div class="Contents">
+    <div class="Content" id="one">
+    <pre><code>
+    from datetime import datetime
+    import requests
+    import time
+    import os
+
+    USING = "BOT_TOKEN1"
+
+    BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
+
+    CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
+
+    MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
+
+</code></pre>
+  </div>
+  </div>
+</div>
+
+<div class="credit">
+  <p>The code snippet format are taken from Stripe's <a href="https://stripe.com/docs/api#create_charge" target="_blank">incredible documentation</a></p>
+</div>
+
+<!-- ```python
 from datetime import datetime
 import requests
 import time
@@ -116,4 +243,4 @@ match STAGE:
         query_endpoint(clear_tracks)
 
 os.chdir("..")
-```
+``` -->
