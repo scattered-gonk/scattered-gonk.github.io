@@ -11,8 +11,8 @@ tags: threat-intel
     pre{
   counter-reset:line-numbering;
   background:#2c3e50;
-  padding:14px 100px 100px 100px;
-  width:700px;
+  padding:20px 20px 20px 20px;
+  width:650px;
   color:#ecf0f1;
   line-height:140%;
     .line::before {
