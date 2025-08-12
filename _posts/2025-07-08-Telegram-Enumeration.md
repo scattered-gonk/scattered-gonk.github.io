@@ -7,6 +7,28 @@ author: "RedDuck"
 tags: threat-intel
 ---
 
+<style>
+    pre{
+  counter-reset:line-numbering;
+  background:#2c3e50;
+  padding:12px 0px 14px 0;
+  width:600px;
+  color:#ecf0f1;
+  line-height:140%;
+    .line::before {
+      content: counter(line-numbering);
+      counter-increment: line-numbering;
+      padding-right: 1em;
+      /* space after numbers */
+      padding-left:8px;
+      width: 1.5em;
+      text-align: right;
+      opacity: 0.5;
+      color:white;
+  }
+}
+</style>
+
 Many phishing sites rely on the Telegram bot API to exfiltrate victim data. Oftentimes, eCriminals are either
 <ul>
     <li> deploying half-baked phishing kits they've purchased from somebody with a username akin to "__1337__phisher", or </li>
@@ -23,44 +45,22 @@ With this token (and oftentimes, the accompanying channel ID to which the inform
 
 THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
 
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markdown.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.9.0/components/prism-markup.js"></script>
+<pre>
+from datetime import datetime
+import requests
+import time
+import os
 
-<!--
- - Highlight.js Style Demos - https://highlightjs.org/static/demo/
- - HTML Encoder - http://codebeautify.org/html-encode-string
- - Tabs to Spaces Converter - http://tabstospaces.com/
--->
-<html>
-  <head>
-    <!-- Requirements for highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/hopscotch.min.css"> <!-- change style here -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
-  
-  <body>
-    <pre>
-    <code class="csharp"> 
-        from datetime import datetime
-        import requests
-        import time
-        import os
+USING = "BOT_TOKEN1"
 
-        USING = "BOT_TOKEN1"
+BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
 
-        BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
+CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
 
-        CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL}"}
+MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
 
-        MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL}"}
-
-        URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
-    </code>
-    </pre>
-  </body>
-<html>
+URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
+</pre>
 
 <!-- ```python
 from datetime import datetime
@@ -166,3 +166,9 @@ match STAGE:
 
 os.chdir("..")
 ``` -->
+<script>
+$("pre").html(function (index, html) {
+    return html.replace(/^(.*)$/mg, "<span 
+class=\"line\">$1</span>")
+});
+</script>
