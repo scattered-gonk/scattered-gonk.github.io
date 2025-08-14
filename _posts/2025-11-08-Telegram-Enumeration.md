@@ -4,7 +4,7 @@ title:  "Telegram Enumeration"
 date:   2025-08-11
 description: "qwerty"
 author: "RedDuck"
-tags: threat-intel
+tags: threat-intelligence
 ---
 
 <style>
