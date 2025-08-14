@@ -8,4 +8,7 @@ tag3:
   name: malware
 
 tag4:
-  name: threat-intel
+  name: threat-intelligence
+
+tag5:
+  name: inside-eCrime
