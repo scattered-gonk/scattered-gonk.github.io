@@ -202,3 +202,43 @@ $("pre").html(function (index, html) {
 class=\"line\">$1</span>")
 });
 </script>
+
+<h2> Alternative Methods for Collection </h2>
+
+On occasion, it is impossible to add another user's Telegram bot to your group due to its configuration. Due to requiring the ID of the group you set up to receive messages, the existing method for data enumeration does not work; however, we can still use message forwarding to achieve data collection:
+
+<script>
+
+enumDelete = {
+    "forwardMessage": f"forwardMessage?chat_id={CHANNEL_IDS[USING]}&from_chat_id={CHANNEL_IDS[USING]}&message_id=",
+}
+
+...
+
+def self_forward_and_delete():
+    response = requests.get("https://ipinfo.io/json")
+    ip_response = response.json()
+    if ip_response['city'].lower() != 'chicago':
+        m_id = 0
+        for x in range(X,Y):
+            for key in enumDelete.keys():
+                looking_at = key
+                response = requests.get(URL+enumDelete[looking_at]+str(x))
+                print(response.text)
+                m_id = response.json()["result"]["message_id"]
+                if "Too Many Requests: retry after" not in response.text and "Bad Request: message to forward not found" not in response.text:
+                    with open(f"{looking_at}.json","a") as a:
+                        a.write(f"{response.text}\n")
+            if m_id != 0:
+                print("Removing duplicate")
+                response = requests.get(URL+f"deleteMessage?chat_id={CHANNEL_IDS[USING]}&message_id="+str(m_id))
+                if '{"ok":true,' in response.text:
+                        with open(f"{looking_at}.json","a") as a:
+                            a.write(f"{response.text}\n")
+                print(f"Removed duplicate: {response.text}")
+
+</script>
+
+For each message found, the bot will forward it to its own chat, and immediately delete the forwarded message according to its assigned ID; at the same time, the saved JSON response will allow you to see what information has been stolen by the attackers. On the attackers's side, there is no noticeable change post-collection -- the messages remain as they were; however, during the collection process it is possible that an attacker may see the momentary appearance and disappearance of their messages. This is a risk we are looking into mitigating.
+
+This method is also suitable for defenders who do not have a Telegram account, or do not wish to create one.
