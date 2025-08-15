@@ -12,7 +12,7 @@ tags: threat-intelligence
   counter-reset:line-numbering;
   background:#2c3e50;
   padding:20px 20px 20px 20px;
-  width:650px;
+  width:700px;
   color:#ecf0f1;
   line-height:140%;
     .line::before {
