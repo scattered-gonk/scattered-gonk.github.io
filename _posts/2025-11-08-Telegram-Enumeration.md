@@ -210,7 +210,8 @@ On occasion, it is impossible to add another user's Telegram bot to your group d
 <pre>
 
 enumDelete = {
-    "forwardMessage": f"forwardMessage?chat_id={CHANNEL_IDS[USING]}&from_chat_id={CHANNEL_IDS[USING]}&message_id=",
+    "forwardMessage": f"forwardMessage?chat_id={CHANNEL_IDS[USING]}&
+    from_chat_id={CHANNEL_IDS[USING]}&message_id=",
 }
 
 ...
@@ -226,12 +227,14 @@ def self_forward_and_delete():
                 response = requests.get(URL+enumDelete[looking_at]+str(x))
                 print(response.text)
                 m_id = response.json()["result"]["message_id"]
-                if "Too Many Requests: retry after" not in response.text and "Bad Request: message to forward not found" not in response.text:
+                if "Too Many Requests: retry after" not in response.text and "Bad Request: 
+                message to forward not found" not in response.text:
                     with open(f"{looking_at}.json","a") as a:
                         a.write(f"{response.text}\n")
             if m_id != 0:
                 print("Removing duplicate")
-                response = requests.get(URL+f"deleteMessage?chat_id={CHANNEL_IDS[USING]}&message_id="+str(m_id))
+                response = requests.get(URL+f"deleteMessage?chat_id={CHANNEL_IDS[USING]}&
+                message_id="+str(m_id))
                 if '{"ok":true,' in response.text:
                         with open(f"{looking_at}.json","a") as a:
                             a.write(f"{response.text}\n")
