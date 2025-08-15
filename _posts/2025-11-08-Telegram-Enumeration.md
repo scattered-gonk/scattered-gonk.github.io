@@ -207,7 +207,7 @@ class=\"line\">$1</span>")
 
 On occasion, it is impossible to add another user's Telegram bot to your group due to its configuration. Due to requiring the ID of the group you set up to receive messages, the existing method for data enumeration does not work; however, we can still use message forwarding to achieve data collection:
 
-<script>
+<pre>
 
 enumDelete = {
     "forwardMessage": f"forwardMessage?chat_id={CHANNEL_IDS[USING]}&from_chat_id={CHANNEL_IDS[USING]}&message_id=",
@@ -237,7 +237,7 @@ def self_forward_and_delete():
                             a.write(f"{response.text}\n")
                 print(f"Removed duplicate: {response.text}")
 
-</script>
+</pre>
 
 For each message found, the bot will forward it to its own chat, and immediately delete the forwarded message according to its assigned ID; at the same time, the saved JSON response will allow you to see what information has been stolen by the attackers. On the attackers's side, there is no noticeable change post-collection -- the messages remain as they were; however, during the collection process it is possible that an attacker may see the momentary appearance and disappearance of their messages. This is a risk we are looking into mitigating.
 
