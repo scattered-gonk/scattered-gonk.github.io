@@ -104,7 +104,7 @@ If any queries are unsuccessful, they are not recorded as part of the reconnaiss
 
 The "auto" mode of Molemaker aims to enumerate stolen data in as hands-off a manner as possible, only asking the user for
 <ul>
-    <li> A user-owned Channel/Group ID (if any) <li>
+    <li> A user-owned Channel/Group ID (if any) </li>
     <li> The minimum of the ID range </li>
     <li> The maximum of the ID range </li>
 </ul>
@@ -205,7 +205,7 @@ The core component of Molemaker is the function that enumerates the stolen data.
                     with open(f"deletedMessage.json","a") as a:
                         a.write(f"{response.text}\n")
                     print("Removed duplicate forwarded message.") 
-                    
+
         return cntr
 </pre>
 
