@@ -29,172 +29,134 @@ tags: threat-intelligence
 }
 </style>
 
-Many phishing sites rely on the Telegram bot API to exfiltrate victim data. Oftentimes, eCriminals are either
+<h2> Turning Loyal Bots into Moles </h2>
+
+Many threat actors and eCriminals rely on the Telegram bot API in order to exfiltrate victim data. This process requires two core elements:
 <ul>
-    <li> deploying half-baked phishing kits they've purchased from somebody with a username akin to "__1337__phisher", or </li>
+    <li> A unique Telegram bot API token </li>
+    <li> The unique Channel or Group ID to which the data will be sent </li> 
+    
+While certain entities keep these sensitive artifacts hidden, others neglect to do so, either because they are
+<ul>
+    <li> deploying half-baked phishing kits they've purchased from somebody called "__1337__phisher", or are</li>
     <li> inexperienced and looking to make a quick profit with minimal effort (and likely more than a pinch of vibe-coding) </li>
 </ul>
 
-Fortunately for us, this means they often leave their Telegram bot API tokens publicly accessible, either through
+Fortunately for defenders, this means that threat actors often leave both their Telegram bot API tokens and Channel/Group IDs publicly accessible, through
 <ul>
-    <li> hard-coding it into the site's page source </li>
-    <li> exposing it in POST requests and responses </li>
+    <li> hard-coding it into the site's page source, or </li>
+    <li> exposing it via POST requests and responses </li>
 </ul>
 
-With this token (and oftentimes, the accompanying channel ID to which the information is sent), we can use the native Telegram bot API to enumerate data pertaining to the attacker's operation, and what data they have stolen so far.
+With this information, we can use the native Telegram bot API to enumerate the data collected by the attacker's operation. With this purpose in mind, we developed Molemaker.
 
-THE FOLLOWING WORKFLOWS SHOULD NOT BE USED AGAINST NON-ATTACKER CHANNELS. WE ONLY ANALYZE SITES SUBMITTED TO PHISHTANK.ORG, AND ARE CONFIMRED TO BE VALID PHISHES.
+<h2> Molemaker </h2>
 
-<pre>
-    from datetime import datetime
-    import requests
-    import time
-    import os
+The creator of most Telegram bots -- if not all -- is the all-powerful BotFather... so we decided to turn his loyal children into silent informants on their operators.
 
-    USING = "BOT_TOKEN1"
+All content covered here has been uploaded to the Molemaker repository on our main GitHub page.
 
-    BOT_TOKENS = {"BOT_TOKEN1": "{BOT-TOKEN}"}
+<h2> Storing The Data </h2>
 
-    CHANNEL_IDS = {"BOT_TOKEN1": "{BOT-CHANNEL-ID}"}
-
-    MY_CHANNEL_IDS = {"BOT_TOKEN1": "{YOUR-CHANNEL-ID}"}
-
-    URL = f"https://api.telegram.org/{BOT_TOKENS[USING]}/" 
-</pre>
+All data enumerated by Molemaker, ranging from information about the bot's channel to the compromised data itself, is stored in a folder
 
 <pre>
-
-# Workflow that will gather data specific to the channel that the attackers are using to exfiltrate data. If the channel ID is not known, you can use 
-# determine this value by interacting with the attacker's bot; the response you receive will likely contain the ID of the channel used to exfiltrate victim data
-channel_endpoints = {
-    "getChatAdministrators":f"getChatAdministrators?chat_id={CHANNEL_IDS[USING]}",
-    "getChat":f"getChat?chat_id={CHANNEL_IDS[USING]}",
-    "getChatMembersCount":f"getChatMembersCount?chat_id={CHANNEL_IDS[USING]}",
-    "createChatInviteLink":f"createChatInviteLink?chat_id={CHANNEL_IDS[USING]}",
-}
-
+    def create_folder(self):
+        import requests
+        from datetime import datetime
+        import os
+        response = requests.get(f"{self.URL}getMe")
+        formatted = response.json()
+        bot_username = formatted["result"]["username"]
+        folder = f"{bot_username}-{datetime.today().strftime('%m-%d-%y')}"
+        exists = False
+        try:
+            os.mkdir(f"{folder}")
+        except:
+            print("Folder already exists")
+            exists = True
+        os.chdir(f"{folder}")
+        return exists
 </pre>
+
+<h2> Interacting With Telegram API Endpoints </h2>
+
+Although the data enumeration of Molemaker requires more precise interaction with Telegram API endpoints, more general queries (e.g., "getMe", "getUpdates", etc.) are passed through one function
 
 <pre>
+    def query_endpoint(self, endpoint):
+        import requests
 
-# Workflow that will gather data on the bot, such as 
-# - Name
-# - Recent updates
-# - Description
-# and other general information that can be used later.
-gen_endpoints = {
-    "getUpdates":"getUpdates",
-    "getWebhookInfo":"getWebhookInfo",
-    "getMe":"getMe",
-    "getMyCommands":"getMyCommands",
-    "getMyName":"getMyName",
-    "getMyDescription":"getMyDescription",
-    "getAvailableGifts":"getAvailableGifts",
-    "getWebhookInfo":"getWebhookInfo",
-}
+        for key in endpoint.keys():
+            response = requests.get(self.URL+endpoint[key])
 
+            print(f"Queried {key}, response was: {response.text}")
+
+            if '{"ok":true' in response.text:
+                with open(f"{key}.json","a") as a:
+                    a.write(f"{response.text}\n") 
 </pre>
+
+If any queries are unsuccessful, they are not recorded as part of the reconnaissance process.
+
+<h2> Making Bots Into Moles </h2>
+
+The "auto" mode of Molemaker aims to enumerate stolen data in as hands-off a manner as possible, only asking the user for
+<ul>
+    <li> A user-owned Channel/Group ID (if any) <li>
+    <li> The minimum of the ID range </li>
+    <li> The maximum of the ID range </li>
+</ul>
 
 <pre>
+    def auto(self):
+        import time
+        from datetime import datetime
 
-# Workflow that will remove evidence of your interaction with the attacker's bot. These endpoints will
-# - Leave the chat you created to enumerate stolen data
-# - Close the bot
-# - Log the bot out
-clear_tracks = {
-    "leaveChat":f"leaveChat?chat_id={MY_CHANNEL_IDS[USING]}",
-    "close":f"close",
-    "logOut":f"logOut"
-}
+        exists = self.create_folder()
 
+        if not exists:
+            self.query_endpoint(self.gen_endpoints)
+            self.query_endpoint(self.channel_endpoints)
+            
+        BLUE_CHANNEL = ""
+
+        BLUE_CHANNEL = input("ENTER YOUR GROUP ID: ")
+        MIN = input("ENTER MINIMUM CHAT ID: ")
+        MAX = input("ENTER MAXIMUM CHAT ID: ")
+        with open("enumeration.log","a") as a:
+            a.write(f"Began enumerating chat IDs between {MIN} - {MAX} at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+        if BLUE_CHANNEL == "":
+            cntr = self.cycle_through_history("RED",int(MIN),int(MAX),BLUE_CHANNEL)
+            print(f"COMPLETED DATA ENUMERATION. RETRIEVED {cntr} MESSAGES.")
+        else:
+            cntr = self.cycle_through_history("BLUE",int(MIN),int(MAX),BLUE_CHANNEL)
+            print(f"COMPLETED DATA ENUMERATION. RETRIEVED {cntr} MESSAGES.")
+
+            exit_channel = {
+                "leaveChat":f"leaveChat?chat_id={BLUE_CHANNEL}",
+                "close":f"close",
+                "logOut":f"logOut"
+            }
+
+            self.query_endpoint(exit_channel)
 </pre>
 
-<pre>
+This mode of Molemaker automates the creation of the folder in which data will be stored, the enumeration of the data itself (given a specific range) and the process of closing your connection to the bot. If no Channel/Group ID is supplied by the user, Molemaker will use an alternative method of data enumeration to the classic forwarding to a user-controlled chat.
 
-# Workflow that will send data specified by you to the attacker's channel. By default, this workflow sends empty messages, and disables notifications, so as to minimize the likelihood that the attacker will immediately detect any anomolous behavior. You may use this workflow to pollute the attacker's
-# dataset, enumerate channel ID(s), etc.
-sendMessage = {
-    "sendMessage":f"sendMessage?text=''&chat_id={MY_CHANNEL_IDS[USING]}&disable_notification=True"
-}
+<h2> Isolated Informants </h2>
 
-</pre>
+In certain instances, a bot is configured by the threat actor in such a way that it is unable to join Channels/Groups other than those managed by the malicious actor. For these cases, Molemaker will switch to the following flow of data enumeration:
+<ul>
+    <li> The bot will forward a discovered message to its own chat </li>
+    <li> The action will generate a unique message_id for the new, forwarded message </li>
+    <li> The bot records the forwarded message to a .json file (as with the usual flow) </li>
+    <li> The bot deletes the newly created message according to its assigned message_id </li>
 
-<pre>
+For each message found, the saved JSON response will allow you to see what information has been stolen by the attackers. On the threat actor's end, there is no noticeable change post-enumeration -- the messages appear as they had before; however, during the enumeration process it is possible that an attacker may see the momentary appearance and disappearance of the forwarded messages. This is a risk we are looking into mitigating.
 
-# Workflow to enumerate what data the attackers have stolen. 
-forwardMessage = {
-    "forwardMessage": f"forwardMessage?chat_id={MY_CHANNEL_IDS[USING]}&from_chat_id={CHANNEL_IDS[USING]}&message_id="
-}
-
-</pre>
-
-<pre>
-
-folder = f"{USING}-{datetime.today().strftime('%m-%d-%y')}"
-try:
-    os.mkdir(f"{folder}")
-except:
-    print("Folder already exists")
-os.chdir(f"{folder}")
-
-</pre>
-
-<pre>
-
-# This method will enumerate the contents of the attacker's chat, according to the message IDS that are 
-# entered into X and Y (e.g., (0,1000) will gather the messages with IDs between 0 and 999).
-def enumerate():
-    for inc in range(X,Y): 
-        for key in forwardMessage.keys():
-            looking_at = key
-            response = requests.get(URL+forwardMessage[looking_at]+str(inc))
-            if "Bad Request: message to forward not found" not in response.text:
-                with open(f"{looking_at}.json","a") as a:
-                    a.write(f"{response.text}\n")
-
-</pre>
-
-<pre>
-
-# This method queries the specific endpoint name that you enter as a parameter, so long as it's dictionary
-# value exists elsewhere in the code.
-def query_endpoint(endpoint):
-    for key in endpoint.keys():
-        looking_at = key
-        response = requests.get(URL+endpoint[looking_at])
-        print(response.text)
-        if '{"ok":true' in response.text:
-            with open(f"{looking_at}.json","a") as a:
-                a.write(f"{response.text}\n")
-
-</pre>
-
-<pre>
-# Gathers preliminary data on the attacker's Telegram channel, as well as information about the bot 
-# itself.
-def initial_recon():
-    query_endpoint(gen_endpoints)
-    query_endpoint(channel_endpoints)
-
-</pre>
-
-<pre>
-
-# Define which stage of operations you want to execute (reconnaissance,enumeration, or clearing evidence
-# of involvement)
-
-STAGE = "#"
-
-match STAGE:
-    case "1":
-        initial_recon()
-    case "2":
-        enumerate()
-    case "3":
-        query_endpoint(clear_tracks)
-
-os.chdir("..")
-</pre>
+This method is also suitable for defenders who do not have a Telegram account, or do not wish to create one.
 
 <script>
 $("pre").html(function (index, html) {
@@ -202,46 +164,3 @@ $("pre").html(function (index, html) {
 class=\"line\">$1</span>")
 });
 </script>
-
-<h2> Alternative Methods for Collection </h2>
-
-On occasion, it is impossible to add another user's Telegram bot to your group due to its configuration. Due to requiring the ID of the group you set up to receive messages, the existing method for data enumeration does not work; however, we can still use message forwarding to achieve data collection:
-
-<pre>
-
-enumDelete = {
-    "forwardMessage": f"forwardMessage?chat_id={CHANNEL_IDS[USING]}&
-    from_chat_id={CHANNEL_IDS[USING]}&message_id=",
-}
-
-...
-
-def self_forward_and_delete():
-    response = requests.get("https://ipinfo.io/json")
-    ip_response = response.json()
-    if ip_response['city'].lower() != 'chicago':
-        m_id = 0
-        for x in range(X,Y):
-            for key in enumDelete.keys():
-                looking_at = key
-                response = requests.get(URL+enumDelete[looking_at]+str(x))
-                print(response.text)
-                m_id = response.json()["result"]["message_id"]
-                if "Too Many Requests: retry after" not in response.text and "Bad Request: 
-                message to forward not found" not in response.text:
-                    with open(f"{looking_at}.json","a") as a:
-                        a.write(f"{response.text}\n")
-            if m_id != 0:
-                print("Removing duplicate")
-                response = requests.get(URL+f"deleteMessage?chat_id={CHANNEL_IDS[USING]}&
-                message_id="+str(m_id))
-                if '{"ok":true,' in response.text:
-                        with open(f"{looking_at}.json","a") as a:
-                            a.write(f"{response.text}\n")
-                print(f"Removed duplicate: {response.text}")
-
-</pre>
-
-For each message found, the bot will forward it to its own chat, and immediately delete the forwarded message according to its assigned ID; at the same time, the saved JSON response will allow you to see what information has been stolen by the attackers. On the attackers's side, there is no noticeable change post-collection -- the messages remain as they were; however, during the collection process it is possible that an attacker may see the momentary appearance and disappearance of their messages. This is a risk we are looking into mitigating.
-
-This method is also suitable for defenders who do not have a Telegram account, or do not wish to create one.
