@@ -31,7 +31,7 @@ tags: threat-intelligence
 
 <h2> Turning Loyal Bots into Moles </h2>
 
-Many threat actors and eCriminals rely on the Telegram bot API in order to exfiltrate victim data. This process requires two core elements:
+Many threat actors and eCriminals rely on the Telegram bot API to exfiltrate victim data. This process requires two core elements:
 <ul>
     <li> A unique Telegram bot API token </li>
     <li> The unique Channel or Group ID to which the data will be sent </li> 
