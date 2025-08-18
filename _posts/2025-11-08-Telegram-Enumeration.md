@@ -35,7 +35,8 @@ Many threat actors and eCriminals rely on the Telegram bot API to exfiltrate vic
 <ul>
     <li> A unique Telegram bot API token </li>
     <li> The unique Channel or Group ID to which the data will be sent </li> 
-    
+</ul>
+
 While certain entities keep these sensitive artifacts hidden, others neglect to do so, either because they are
 <ul>
     <li> deploying half-baked phishing kits they've purchased from somebody called "__1337__phisher", or are</li>
