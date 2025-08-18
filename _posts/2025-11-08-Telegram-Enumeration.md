@@ -159,6 +159,56 @@ For each message found, the saved JSON response will allow you to see what infor
 
 This method is also suitable for defenders who do not have a Telegram account, or do not wish to create one.
 
+<h2> Molemaker </h2>
+
+The core component of Molemaker is the function that enumerates the stolen data. It has the ability to both forward messages to a defender-controlled Channel/Group or use the "Isolated Informants" mode should the need arise. 
+
+<pre>
+    def cycle_through_history(self, destination, minimum, maximum, BLUE_CHANNEL_ID=""):
+        import requests
+
+        if destination=="BLUE":
+            using = {
+            "forwardMessage": f"forwardMessage?chat_id={BLUE_CHANNEL_ID}&from_chat_id={self.r_channel}&message_id="
+        }
+        elif destination=="RED":
+            using = {
+            "forwardMessage": f"forwardMessage?chat_id={self.r_channel}&from_chat_id={self.r_channel}&message_id=",
+        }
+
+        cntr = 0
+
+        for x in range(minimum,maximum):
+            m_id = 0
+
+            for key in using.keys():
+                endpoint = key
+                response = requests.get(self.URL+using[endpoint]+str(x))
+                formatted = response.json()
+                print(formatted)
+                
+                try:
+                    m_id = formatted["result"]["message_id"]
+                except:
+                    continue
+
+                if '{"ok":true' in response.text:
+                    cntr += 1  
+                    with open(f"{endpoint}.json","a") as a:
+                        a.write(f"{response.text}\n")
+
+            if m_id != 0 and destination == "RED":
+                print("Removing duplicate forwarded message.")
+                response = requests.get(self.URL+f"deleteMessage?chat_id={self.r_channel}&message_id={m_id}")
+
+                if '{"ok":true,' in response.text:
+                    with open(f"deletedMessage.json","a") as a:
+                        a.write(f"{response.text}\n")
+                    print("Removed duplicate forwarded message.") 
+                    
+        return cntr
+</pre>
+
 <script>
 $("pre").html(function (index, html) {
     return html.replace(/^(.*)$/mg, "<span 
