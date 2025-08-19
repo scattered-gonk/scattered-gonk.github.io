@@ -155,9 +155,13 @@ In certain instances, a bot is configured by the threat actor in such a way that
     <li> The bot records the forwarded message to a .json file (as with the usual flow) </li>
     <li> The bot deletes the newly created message according to its assigned message_id </li>
 
-For each message found, the saved JSON response will allow you to see what information has been stolen by the attackers. On the threat actor's end, there is no noticeable change post-enumeration -- the messages appear as they had before; however, during the enumeration process it is possible that an attacker may see the momentary appearance and disappearance of the forwarded messages. This is a risk we are looking into mitigating.
+For each message found, the saved JSON response will allow you to see what information has been stolen by the attackers. This method is also beneficial for defenders who do not have a Telegram account or do not wish to create one.
 
-This method is also suitable for defenders who do not have a Telegram account, or do not wish to create one.
+<h2> Isolated Informant Considerations </h2>
+
+On the threat actor's end, there is no noticeable change post-enumeration -- the messages appear as they had before; however, during the enumeration process it is possible that an attacker may see the momentary appearance and disappearance of the forwarded messages. This is a risk we are looking into mitigating.
+
+Additionally, Isolated Informant mode does not currently allow defenders to view files that are enumerated by the process. Correlating the retrieved file IDs to their downloadable counterparts is under development and will be available soon.
 
 <h2> Molemaker </h2>
 
