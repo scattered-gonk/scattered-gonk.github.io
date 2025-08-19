@@ -154,6 +154,7 @@ In certain instances, a bot is configured by the threat actor in such a way that
     <li> The action will generate a unique message_id for the new, forwarded message </li>
     <li> The bot records the forwarded message to a .json file (as with the usual flow) </li>
     <li> The bot deletes the newly created message according to its assigned message_id </li>
+</ul>
 
 For each message found, the saved JSON response will allow you to see what information has been stolen by the attackers. This method is also beneficial for defenders who do not have a Telegram account or do not wish to create one.
 
