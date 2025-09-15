@@ -1,5 +1,5 @@
 ---
-layout: phishing-campaigns-default
+layout: phishing-campaign-default
 title:  "Tencent-Toll"
 date:   2025-05-26
 description: "qwerty"
