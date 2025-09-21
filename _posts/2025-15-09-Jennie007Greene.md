@@ -18,9 +18,18 @@ Indicators of Compromise:
     <li>Domains that are part of the phishing campaign are structured as follows:
         <ul>
             <li>hxxps[://]domain[.]com/backup/Jennie007Greene[.]php </li>
-            <li>hxxps[://]domain[.]com/backup/{random string}/ic-access/{page name}[.]html</li>
+            <li>hxxps[://]domain[.]com/backup/.../{random word}-access/{page name}[.]html</li>
         </ul>
     </li>
+    <li> Endpoints commonly seen accompanying Jennie007Greene.php:
+        <ul>
+            <li>hxxps[://]domain[.]com/.../ss[.]html</li>
+            <li>hxxps[://]domain[.]com/.../details[.]html</li>
+            <li>hxxps[://]domain[.]com/.../otp[.]html</li>
+            <li>hxxps[://]domain[.]com/.../personal[.]html</li>
+            <li>hxxps[://]domain[.]com/.../otp2[.]html</li>
+            <li>hxxps[://]domain[.]com/.../otp3[.]html</li>
+        </ul>
     <li> Hashes of Jennie007Greene.php:
         <ul>
             <li>3bb4dd755a1495466d09c9a3767b13f6</li>
