@@ -59,4 +59,6 @@ Indicators of Compromise:
     </li>
 </ul>
 
+In addition, all observed instances of config.php files present alongside Jennie007Greene.php contain identical Telegram bot API tokens and channel IDs. This indicates that a single entity -- individual or not -- may be compromising sites and deploying Jennie007Greene.php, rather than it being part of a publicly sold phishing kit.
+
 An in-depth analysis of Jennie007Greene.php will be available shortly.
