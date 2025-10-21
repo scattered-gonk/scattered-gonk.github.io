@@ -7,21 +7,15 @@ author: "GlowDuck"
 tags: scam-analysis
 ---
 
-As of 9/14/205, several distinct Wordpress domains submitted to the OpenPhish.com database, urlscan.io, and other artifact collection platforms have been infected by threat actors with the Jennie007Greene.php web shell. For the purpose of protecting these domains from further exploitation and defacement, no specific domains will be discussed; however, general Indicators of Compromise are available below.
+As of 9/14/2025, several distinct Wordpress domains submitted to artifact collection platforms (PhishTank, urlscan.io, OpenPhish, etc.) have been infected with the Jennie007Greene.php web shell. To mitigate the risk of further exploitation and defacement, no specific domains will be discussed; however, general Indicators of Compromise are available below.
 
-Multiple compromised domains allow the threat actor wide swathes of access to victim emails, usernames, and passwords. In addition to recording phishing campaign credentials in .txt files, the attackers used the Telegram bot API to exfiltrate sensitive victim data.
+The volume of compromised domains allow the threat actor access to wide swathes of data, including victim emails, usernames, and passwords. In addition to using hard-coded email credentials to exfiltrate victim data, Telegram bots are used to send data to attacker-controlled Telegram chats -- the bulk of Telegram bot API keys and channel IDs captured during research are identical, hinting at a single group or individual being responsible for the breaches.
 
-Files frequently found alongside Jennie007Greene.php included a configuration file that specified the format in which data would be sent via Telegram bot; a section of this formatted message was consistently observed to include the string "@SMARTMACBOOKBOT*TFCU". Inspecting the data enumerated from attacker-controlled chats, we determined that messages containing this string began appearing on August 21st of 2025, though was preceeded by messages without the string. We may therefore mark 08/21/25 aa a general point at which this iteration of the threat actor's phishing campaigns started.
+A section of the Telegram bot configuration files often included the header of the message sent to the attacker-controlled channel Files; a significant portion of these headers include the string "@SMARTMACBOOKBOT*TFCU". After inspecting the data enumerated from attacker-controlled chats, we determined that messages containing this string began appearing on August 21st of 2025, though was preceeded by messages without the string. We may therefore mark 08/21/25 aa a general point at which this iteration of the threat actor's phishing campaigns started.
 
 Indicators of Compromise:
 <ul>
-    <li>Domains that are part of the phishing campaign are structured as follows:
-        <ul>
-            <li>hxxps[://]domain[.]com/backup/Jennie007Greene[.]php </li>
-            <li>hxxps[://]domain[.]com/backup/.../{random word}-access/{page name}[.]html</li>
-        </ul>
-    </li>
-    <li> Endpoints commonly seen accompanying Jennie007Greene.php:
+    <li> Endpoints commonly seen accompanying Jennie007Greene.php-compromised sites:
         <ul>
             <li>hxxps[://]domain[.]com/.../ss[.]html</li>
             <li>hxxps[://]domain[.]com/.../details[.]html</li>
@@ -53,6 +47,4 @@ Indicators of Compromise:
             <li>f6fca06e2aac270b488f73bcf0a10d249e2722a015135e60dbb49360c5335a72</li>
         </ul>
     </li>
-In addition, all observed instances of config.php files present alongside Jennie007Greene.php contain identical Telegram bot API tokens and channel IDs. This indicates that a single entity -- individual or not -- may be compromising sites and deploying Jennie007Greene.php, rather than it being part of a publicly sold phishing kit.
-
 An in-depth analysis of Jennie007Greene.php will be available shortly.
