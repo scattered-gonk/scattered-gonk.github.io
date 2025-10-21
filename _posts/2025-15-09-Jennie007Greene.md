@@ -9,6 +9,9 @@ tags: scam-analysis
 
 As of 9/14/2025, several distinct Wordpress domains submitted to artifact collection platforms (PhishTank, urlscan.io, OpenPhish, etc.) have been infected with the Jennie007Greene.php web shell. To mitigate the risk of further exploitation and defacement, no specific domains will be discussed; however, general Indicators of Compromise are available below.
 
+**Any interaction with sites using SumKit inherently carries a high level of risk and should not be done without proper safeguards and preparation. SqueakyFlotilla highly cautions against interacting with these sites, and are not liable for compromised information or incurred damages should others seek to experiment with the site.**
+<hr />
+
 The volume of compromised domains allow the threat actor access to wide swathes of data, including victim emails, usernames, and passwords. In addition to using hard-coded email credentials to exfiltrate victim data, Telegram bots are used to send data to attacker-controlled Telegram chats -- the bulk of Telegram bot API keys and channel IDs captured during research are identical, hinting at a single group or individual being responsible for the breaches.
 
 A section of the Telegram bot configuration files often included the header of the message sent to the attacker-controlled channel Files; a significant portion of these headers include the string "@SMARTMACBOOKBOT*TFCU". After inspecting the data enumerated from attacker-controlled chats, we determined that messages containing this string began appearing on August 21st of 2025, though was preceeded by messages without the string. We may therefore mark 08/21/25 aa a general point at which this iteration of the threat actor's phishing campaigns started.
