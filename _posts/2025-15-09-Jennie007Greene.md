@@ -14,7 +14,7 @@ As of 9/14/2025, several distinct Wordpress domains submitted to artifact collec
 
 The volume of compromised domains allow the threat actor access to wide swathes of data, including victim emails, usernames, and passwords. In addition to using hard-coded email credentials to exfiltrate victim data, Telegram bots are used to send data to attacker-controlled Telegram chats -- the bulk of Telegram bot API keys and channel IDs captured during research are identical, hinting at a single group or individual being responsible for the breaches.
 
-A section of the Telegram bot configuration files often included the header of the message sent to the attacker-controlled channel Files; a significant portion of these headers include the string "@SMARTMACBOOKBOT*TFCU". After inspecting the data enumerated from attacker-controlled chats, we determined that messages containing this string began appearing on August 21st of 2025, though was preceeded by messages without the string. We may therefore mark 08/21/25 aa a general point at which this iteration of the threat actor's phishing campaigns started.
+A section of the Telegram bot configuration files often included the header of the message sent to the attacker-controlled channel Files; a significant portion of these headers include the string "@SMARTMACBOOKBOT*TFCU". After inspecting the data enumerated from attacker-controlled chats, we determined that messages containing this string began appearing on August 21st of 2025, though was preceeded by messages without the string. We may therefore mark 08/21/25 as a general point at which this iteration of the threat actor's phishing campaigns started.
 
 Indicators of Compromise:
 <ul>
