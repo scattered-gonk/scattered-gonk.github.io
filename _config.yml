@@ -19,6 +19,7 @@ sass:
 
 # Markdown
 markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
